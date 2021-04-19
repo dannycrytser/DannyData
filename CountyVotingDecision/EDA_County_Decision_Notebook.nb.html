@@ -1737,197 +1737,321 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<div id="loading-libraries--" class="section level1">
-<h1>—-LOADING LIBRARIES —-</h1>
+<div id="loading-libraries" class="section level1">
+<h1>LOADING LIBRARIES</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzaGlueSlcbmxpYnJhcnkodGlkeXZlcnNlKVxuYGBgIn0= -->
+<pre class="r"><code>library(shiny)
+library(tidyverse)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxuXHUwMDFiWzM3beKUgOKUgCBcdTAwMWJbMW1BdHRhY2hpbmcgcGFja2FnZXNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2UgMS4zLjEg4pSA4pSAXHUwMDFiWzM5bVxuXHUwMDFiWzM3bVx1MDAxYlszMm3inJNcdTAwMWJbMzdtIFx1MDAxYlszNG1nZ3Bsb3QyXHUwMDFiWzM3bSAzLjMuMyAgICAgXHUwMDFiWzMybeKck1x1MDAxYlszN20gXHUwMDFiWzM0bXB1cnJyICBcdTAwMWJbMzdtIDAuMy40XG5cdTAwMWJbMzJt4pyTXHUwMDFiWzM3bSBcdTAwMWJbMzRtdGliYmxlIFx1MDAxYlszN20gMy4xLjEgICAgIFx1MDAxYlszMm3inJNcdTAwMWJbMzdtIFx1MDAxYlszNG1kcGx5ciAgXHUwMDFiWzM3bSAxLjAuNVxuXHUwMDFiWzMybeKck1x1MDAxYlszN20gXHUwMDFiWzM0bXRpZHlyICBcdTAwMWJbMzdtIDEuMS4zICAgICBcdTAwMWJbMzJt4pyTXHUwMDFiWzM3bSBcdTAwMWJbMzRtc3RyaW5nclx1MDAxYlszN20gMS40LjBcblx1MDAxYlszMm3inJNcdTAwMWJbMzdtIFx1MDAxYlszNG1yZWFkciAgXHUwMDFiWzM3bSAxLjQuMCAgICAgXHUwMDFiWzMybeKck1x1MDAxYlszN20gXHUwMDFiWzM0bWZvcmNhdHNcdTAwMWJbMzdtIDAuNS4xXHUwMDFiWzM5bVxuXHUwMDFiWzM3beKUgOKUgCBcdTAwMWJbMW1Db25mbGljdHNcdTAwMWJbMjJtIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG5cdTAwMWJbMzFteFx1MDAxYlszN20gXHUwMDFiWzM0bWRwbHlyXHUwMDFiWzM3bTo6XHUwMDFiWzMybWZpbHRlcigpXHUwMDFiWzM3bSBtYXNrcyBcdTAwMWJbMzRtc3RhdHNcdTAwMWJbMzdtOjpmaWx0ZXIoKVxuXHUwMDFiWzMxbXhcdTAwMWJbMzdtIFx1MDAxYlszNG1kcGx5clx1MDAxYlszN206Olx1MDAxYlszMm1sYWcoKVx1MDAxYlszN20gICAgbWFza3MgXHUwMDFiWzM0bXN0YXRzXHUwMDFiWzM3bTo6bGFnKClcdTAwMWJbMzltXG4ifQ== -->
+<pre><code>Registered S3 methods overwritten by 'dbplyr':
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+[37m── [1mAttaching packages[22m ────────────────────────────────────────────────── tidyverse 1.3.1 ──[39m
+[37m[32m✓[37m [34mggplot2[37m 3.3.3     [32m✓[37m [34mpurrr  [37m 0.3.4
+[32m✓[37m [34mtibble [37m 3.1.1     [32m✓[37m [34mdplyr  [37m 1.0.5
+[32m✓[37m [34mtidyr  [37m 1.1.3     [32m✓[37m [34mstringr[37m 1.4.0
+[32m✓[37m [34mreadr  [37m 1.4.0     [32m✓[37m [34mforcats[37m 0.5.1[39m
+[37m── [1mConflicts[22m ───────────────────────────────────────────────────── tidyverse_conflicts() ──
+[31mx[37m [34mdplyr[37m::[32mfilter()[37m masks [34mstats[37m::filter()
+[31mx[37m [34mdplyr[37m::[32mlag()[37m    masks [34mstats[37m::lag()[39m</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShSQ3VybClcbmBgYCJ9 -->
+<pre class="r"><code>library(RCurl)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYUkN1cmzigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTp0aWR5cuKAmTpcblxuICAgIGNvbXBsZXRlXG4ifQ== -->
+<pre><code>
+Attaching package: ‘RCurl’
+
+The following object is masked from ‘package:tidyr’:
+
+    complete</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShycGFydClcbmxpYnJhcnkobWFwcylcbmBgYCJ9 -->
+<pre class="r"><code>library(rpart)
+library(maps)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbWFwc+KAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnB1cnJy4oCZOlxuXG4gICAgbWFwXG4ifQ== -->
+<pre><code>
+Attaching package: ‘maps’
+
+The following object is masked from ‘package:purrr’:
+
+    map</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShtYXBwcm9qKVxubGlicmFyeShycGFydC5wbG90KVxuYGBgIn0= -->
+<pre class="r"><code>library(mapproj)
+library(rpart.plot)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
-<div id="we-probably-dont-need-the-whole-tidyerse-but" class="section level1">
-<h1>we probably don’t need the whole tidyerse but</h1>
+<div id="loading-data" class="section level1">
+<h1>LOADING DATA</h1>
+<p>Get 2010 US census data (data on county-level racial composition):</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2Vuc3VzX2RmIDwtIHJlYWRSRFMoXCJkYXRhL2NlbnN1cy5yZHNcIilcbmNlbnN1c19kZiA8LSBhc190aWJibGUoY2Vuc3VzX2RmKVxuY2Vuc3VzX2RmIDwtIGNlbnN1c19kZiAlPiVcbiAgICByZW5hbWUodG90YWxfcG9wID0gdG90YWwucG9wKVxuYGBgIn0= -->
+<pre class="r"><code>census_df &lt;- readRDS(&quot;data/census.rds&quot;)
+census_df &lt;- as_tibble(census_df)
+census_df &lt;- census_df %&gt;%
+    rename(total_pop = total.pop)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Get population density data (calculated by a Github user using census and wikipedia):</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5kZW5zaXR5X3VybCA8LSBnZXRVUkwoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20veWt6ZW5nL2NvdmlkLTE5L21hc3Rlci9kYXRhL2NlbnN1cy1wb3B1bGF0aW9uLWxhbmRhcmVhLmNzdlwiKVxuZGVuc2l0eV9kZiA8LSByZWFkX2NzdihkZW5zaXR5X3VybClcblxuYGBgIn0= -->
+<pre class="r"><code>
+density_url &lt;- getURL(&quot;https://raw.githubusercontent.com/ykzeng/covid-19/master/data/census-population-landarea.csv&quot;)
+density_df &lt;- read_csv(density_url)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Get USDA county-level education statistics (from the USDA)</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5lZHVjX3VybCA8LSBnZXRVUkwoXCJodHRwczovL3d3dy5lcnMudXNkYS5nb3Yvd2ViZG9jcy9EYXRhRmlsZXMvNDg3NDcvRWR1Y2F0aW9uLmNzdlwiKVxuZWR1Y19kZiA8LSByZWFkX2NzdihlZHVjX3VybClcblxuYGBgIn0= -->
+<pre class="r"><code>
+educ_url &lt;- getURL(&quot;https://www.ers.usda.gov/webdocs/DataFiles/48747/Education.csv&quot;)
+educ_df &lt;- read_csv(educ_url)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Get poverty stats (from the USDA):</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5wb3ZfdXJsIDwtIGdldFVSTChcImh0dHBzOi8vd3d3LmVycy51c2RhLmdvdi93ZWJkb2NzL0RhdGFGaWxlcy80ODc0Ny9Qb3ZlcnR5RXN0aW1hdGVzLmNzdlwiKVxucG92X2RmIDwtIHJlYWRfY3N2KHBvdl91cmwpXG5cbmBgYCJ9 -->
+<pre class="r"><code>
+pov_url &lt;- getURL(&quot;https://www.ers.usda.gov/webdocs/DataFiles/48747/PovertyEstimates.csv&quot;)
+pov_df &lt;- read_csv(pov_url)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Get unemployment stats (from the USDA):</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5lbXBfdXJsIDwtICBnZXRVUkwoXCJodHRwczovL3d3dy5lcnMudXNkYS5nb3Yvd2ViZG9jcy9EYXRhRmlsZXMvNDg3NDcvVW5lbXBsb3ltZW50LmNzdlwiKVxuZW1wX2RmIDwtIHJlYWRfY3N2KGVtcF91cmwpXG5cbmBgYCJ9 -->
+<pre class="r"><code>
+emp_url &lt;-  getURL(&quot;https://www.ers.usda.gov/webdocs/DataFiles/48747/Unemployment.csv&quot;)
+emp_df &lt;- read_csv(emp_url)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Get pop stats (also, from the USDA):</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5wb3BfdXJsIDwtIGdldFVSTChcImh0dHBzOi8vd3d3LmVycy51c2RhLmdvdi93ZWJkb2NzL0RhdGFGaWxlcy80ODc0Ny9Qb3B1bGF0aW9uRXN0aW1hdGVzLmNzdlwiKVxucG9wX2RmIDwtIHJlYWRfY3N2KHBvcF91cmwpXG5gYGAifQ== -->
+<pre class="r"><code>
+pop_url &lt;- getURL(&quot;https://www.ers.usda.gov/webdocs/DataFiles/48747/PopulationEstimates.csv&quot;)
+pop_df &lt;- read_csv(pop_url)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiMyBwYXJzaW5nIGZhaWx1cmVzLlxuIHJvdyAgICAgICAgICAgY29sICAgICAgICAgICAgICAgZXhwZWN0ZWQgYWN0dWFsICAgICAgICAgZmlsZVxuMTkyNSBSRVNJRFVBTF8yMDEwIG5vIHRyYWlsaW5nIGNoYXJhY3RlcnMgMiwwMTQgIGxpdGVyYWwgZGF0YVxuMjI4NCBSRVNJRFVBTF8yMDEwIG5vIHRyYWlsaW5nIGNoYXJhY3RlcnMgLTEsMzU4IGxpdGVyYWwgZGF0YVxuMjU2OCBSRVNJRFVBTF8yMDEwIG5vIHRyYWlsaW5nIGNoYXJhY3RlcnMgMSwxODIgIGxpdGVyYWwgZGF0YVxuIn0= -->
+<pre><code>3 parsing failures.
+ row           col               expected actual         file
+1925 RESIDUAL_2010 no trailing characters 2,014  literal data
+2284 RESIDUAL_2010 no trailing characters -1,358 literal data
+2568 RESIDUAL_2010 no trailing characters 1,182  literal data</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>The last data set we want is a .csv containing countywide election data we got this for a previous project and the code to generate it is contained in the script munging.py.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG52b3RlX2RmIDwtIHJlYWRfY3N2KCdkYXRhL3ByZXNfcmFjZV8yMDIwLmNzdicpXG5gYGAifQ== -->
+<pre class="r"><code>
+vote_df &lt;- read_csv('data/pres_race_2020.csv')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdTAwMWJbMzZt4pSA4pSAXHUwMDFiWzM5bSBcdTAwMWJbMW1cdTAwMWJbMW1Db2x1bW4gc3BlY2lmaWNhdGlvblx1MDAxYlsxbVx1MDAxYlsyMm0gXHUwMDFiWzM2beKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFx1MDAxYlszOW1cbmNvbHMoXG4gIGdlb2lkID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIHRfY291bnR5X25hbWUgPSBcdTAwMWJbMzFtY29sX2NoYXJhY3RlcigpXHUwMDFiWzM5bSxcbiAgdG90YWxfdm90ZXMgPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgdF9zdGF0ZV9uYW1lID0gXHUwMDFiWzMxbWNvbF9jaGFyYWN0ZXIoKVx1MDAxYlszOW0sXG4gIHZvdGVzX2dvcCA9IFx1MDAxYlszMm1jb2xfZG91YmxlKClcdTAwMWJbMzltLFxuICB2b3Rlc19kZW0gPSBcdTAwMWJbMzJtY29sX2RvdWJsZSgpXHUwMDFiWzM5bSxcbiAgc3RhdGVfZmlwcyA9IFx1MDAxYlszMW1jb2xfY2hhcmFjdGVyKClcdTAwMWJbMzltXG4pXG4ifQ== -->
+<pre><code>
+[36m──[39m [1m[1mColumn specification[1m[22m [36m───────────────────────────────────────────────────────────────────[39m
+cols(
+  geoid = [31mcol_character()[39m,
+  t_county_name = [31mcol_character()[39m,
+  total_votes = [32mcol_double()[39m,
+  t_state_name = [31mcol_character()[39m,
+  votes_gop = [32mcol_double()[39m,
+  votes_dem = [32mcol_double()[39m,
+  state_fips = [31mcol_character()[39m
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
-<div id="its-a-bit-easier" class="section level1">
-<h1>it’s a bit easier</h1>
-<p>library(shiny) library(tidyverse) library(RCurl) library(rpart) library(maps) library(mapproj) library(rpart.plot)</p>
+<div id="wrangling-data" class="section level1">
+<h1>WRANGLING DATA</h1>
+<p>There are a few changes we have to make to the data sets before we can join them.</p>
+<p>First, we need to widen the emp_df and pov_df tables. We do this with tidyr’s pivot_wider function.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5wb3ZfZGYgPC0gcG92X2RmICU+JVxuICAgIHBpdm90X3dpZGVyKG5hbWVzX2Zyb20gPSBBdHRyaWJ1dGUsXG4gICAgICAgICAgICAgICAgdmFsdWVzX2Zyb20gPSBWYWx1ZSkgXG5cbmVtcF9kZiA8LSBlbXBfZGYgJT4lXG4gICAgcGl2b3Rfd2lkZXIobmFtZXNfZnJvbSA9IEF0dHJpYnV0ZSxcbiAgICAgICAgICAgICAgICB2YWx1ZXNfZnJvbSA9IFZhbHVlKVxuXG5gYGAifQ== -->
+<pre class="r"><code>
+pov_df &lt;- pov_df %&gt;%
+    pivot_wider(names_from = Attribute,
+                values_from = Value) 
+
+emp_df &lt;- emp_df %&gt;%
+    pivot_wider(names_from = Attribute,
+                values_from = Value)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>The census_df is missing a FIPS column, and instead it has a name column we can repair this by joining it to another table that contains both name and FIPS</p>
+<p>Glimpsing the dataframes we’ve loaded so far, we see that the employment, population, and poverty dataframes have poorly formatted FIPStxt columns (in fact they are recorded as double values when they should be character strings)</p>
+<p>As the FIPS is the joining key we need it to be in a standard format. The following is used</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJlcGVuZF96ZXJvIDwtIGZ1bmN0aW9uKG51bWJlcl92YWx1ZSl7XG4gICAgY2hhcl92YWx1ZSA8LSBhcy5jaGFyYWN0ZXIobnVtYmVyX3ZhbHVlKVxuICAgIGlmKHN0cl9sZW5ndGgoY2hhcl92YWx1ZSkgPCA1KXtcbiAgICAgICAgY2hhcl92YWx1ZSA8LSBwYXN0ZShcIjBcIixjaGFyX3ZhbHVlLCBzZXAgPSBcIlwiKVxuICAgIH1cbiAgICBjaGFyX3ZhbHVlXG59XG5wcmVwZW5kX3plcm8gPC0gVmVjdG9yaXplKHByZXBlbmRfemVybylcbmBgYCJ9 -->
+<pre class="r"><code>prepend_zero &lt;- function(number_value){
+    char_value &lt;- as.character(number_value)
+    if(str_length(char_value) &lt; 5){
+        char_value &lt;- paste(&quot;0&quot;,char_value, sep = &quot;&quot;)
+    }
+    char_value
+}
+prepend_zero &lt;- Vectorize(prepend_zero)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Now we can actually go through and fix the FIPStxt columns in emp_df, pop_df, and pov_df. While we do this we add in duplicates of the (valid) FIPS columns in the other two data sets</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5kZW5zaXR5X2RmIDwtIGRlbnNpdHlfZGYgJT4lXG4gICAgbXV0YXRlKGZpcHMgPSBwcmVwZW5kX3plcm8oZmlwcykpXG5cbnBvdl9kZiA8LSBwb3ZfZGYgJT4lXG4gICAgbXV0YXRlKGZpcHMgPSBwcmVwZW5kX3plcm8oRklQU3R4dCkpXG5cbmVtcF9kZiA8LSBlbXBfZGYgJT4lXG4gICAgbXV0YXRlKGZpcHMgPSBwcmVwZW5kX3plcm8oZmlwc190eHQpKVxuXG5wb3BfZGYgPC0gcG9wX2RmICU+JVxuICAgIG11dGF0ZShmaXBzID0gcHJlcGVuZF96ZXJvKEZJUFN0eHQpKVxuXG52b3RlX2RmIDwtIHZvdGVfZGYgJT4lXG4gICAgcmVuYW1lKGZpcHMgPSBnZW9pZClcblxuZWR1Y19kZiA8LSBlZHVjX2RmICU+JVxuICAgIHJlbmFtZShmaXBzID0gJ0ZJUFMgQ29kZScpXG5cbmBgYCJ9 -->
+<pre class="r"><code>
+density_df &lt;- density_df %&gt;%
+    mutate(fips = prepend_zero(fips))
+
+pov_df &lt;- pov_df %&gt;%
+    mutate(fips = prepend_zero(FIPStxt))
+
+emp_df &lt;- emp_df %&gt;%
+    mutate(fips = prepend_zero(fips_txt))
+
+pop_df &lt;- pop_df %&gt;%
+    mutate(fips = prepend_zero(FIPStxt))
+
+vote_df &lt;- vote_df %&gt;%
+    rename(fips = geoid)
+
+educ_df &lt;- educ_df %&gt;%
+    rename(fips = 'FIPS Code')
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Add in dem_pct and gop_pct to the vote_df</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG52b3RlX2RmIDwtIHZvdGVfZGYgJT4lXG4gICAgbXV0YXRlKFxuICAgICAgICAgICBkZW1fcGN0ID0gMTAwKnZvdGVzX2RlbS8odm90ZXNfZGVtK3ZvdGVzX2dvcCksXG4gICAgICAgICAgIGdvcF9wY3QgPSAxMDAqdm90ZXNfZ29wLyh2b3Rlc19kZW0rdm90ZXNfZ29wKVxuICAgICAgICAgIClcblxuYGBgIn0= -->
+<pre class="r"><code>
+vote_df &lt;- vote_df %&gt;%
+    mutate(
+           dem_pct = 100*votes_dem/(votes_dem+votes_gop),
+           gop_pct = 100*votes_gop/(votes_dem+votes_gop)
+          )
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Add in categorical variable (did the county vote Dem/GOP in 2020 Pres) to vote_df</p>
+<p>Probably unnecessarily we write a little function to make the call to mutate a bit simpler.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5tYWpvcml0eV92b3RlIDwtIGZ1bmN0aW9uKHZvdGVzX2RlbSwgdm90ZXNfZ29wKXtcbiAgICB2b3RlID0gJ0QnXG4gICAgaWYodm90ZXNfZGVtIDwgdm90ZXNfZ29wKXtcbiAgICAgICAgdm90ZSA9ICdSJ1xuICAgIH1cbiAgICB2b3RlXG59XG5tYWpvcml0eV92b3RlIDwtIFZlY3Rvcml6ZShtYWpvcml0eV92b3RlKVxuXG5gYGAifQ== -->
+<pre class="r"><code>
+majority_vote &lt;- function(votes_dem, votes_gop){
+    vote = 'D'
+    if(votes_dem &lt; votes_gop){
+        vote = 'R'
+    }
+    vote
+}
+majority_vote &lt;- Vectorize(majority_vote)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>(Whenever you’re using a function in mutate, don’t forget to vectorize!)</p>
+<p>Now we create the majority vote categorical var</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG52b3RlX2RmIDwtIHZvdGVfZGYgJT4lXG4gICAgbXV0YXRlKG1ham9yaXR5ID0gbWFqb3JpdHlfdm90ZSh2b3Rlc19kZW0sIHZvdGVzX2dvcCkpXG4gICAgXG52b3RlX2RmJG1ham9yaXR5IDwtIGFzLmZhY3Rvcih2b3RlX2RmJG1ham9yaXR5KVxuXG5gYGAifQ== -->
+<pre class="r"><code>
+vote_df &lt;- vote_df %&gt;%
+    mutate(majority = majority_vote(votes_dem, votes_gop))
+    
+vote_df$majority &lt;- as.factor(vote_df$majority)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>We also include a state-level majority to decide how many states we classify incorrectly</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5zdGF0ZV9kZiA8LSB2b3RlX2RmICU+JVxuICAgIGdyb3VwX2J5KHRfc3RhdGVfbmFtZSkgJT4lXG4gICAgc3VtbWFyaXNlKHRvdGFsX2RlbSA9IHN1bSh2b3Rlc19kZW0pLCBcbiAgICAgICAgICAgICAgdG90YWxfZ29wID0gc3VtKHZvdGVzX2dvcCkpICU+JVxuICAgIG11dGF0ZShzdGF0ZV9tYWpvcml0eSA9IG1ham9yaXR5X3ZvdGUodG90YWxfZGVtLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdG90YWxfZ29wKSlcblxuc3RhdGVfZGYkc3RhdGVfbWFqb3JpdHkgPC0gYXMuZmFjdG9yKHN0YXRlX2RmJHN0YXRlX21ham9yaXR5KVxuXG52b3RlX2RmIDwtIHZvdGVfZGYgJT4lXG4gICAgaW5uZXJfam9pbihzdGF0ZV9kZiwgYnkgPSAndF9zdGF0ZV9uYW1lJylcblxuYGBgIn0= -->
+<pre class="r"><code>
+state_df &lt;- vote_df %&gt;%
+    group_by(t_state_name) %&gt;%
+    summarise(total_dem = sum(votes_dem), 
+              total_gop = sum(votes_gop)) %&gt;%
+    mutate(state_majority = majority_vote(total_dem,
+                                          total_gop))
+
+state_df$state_majority &lt;- as.factor(state_df$state_majority)
+
+vote_df &lt;- vote_df %&gt;%
+    inner_join(state_df, by = 't_state_name')
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
-<div id="loading-data--" class="section level1">
-<h1>—-LOADING DATA —-</h1>
-</div>
-<div id="get-2010-us-census-data-data-on-county-level-racial-composition" class="section level1">
-<h1>get 2010 US census data (data on county-level racial composition)</h1>
-<p>census_df &lt;- readRDS(“data/census.rds”) census_df &lt;- as_tibble(census_df) census_df &lt;- census_df %&gt;% rename(total_pop = total.pop)</p>
-</div>
-<div id="get-population-density-data" class="section level1">
-<h1>get population density data</h1>
-<p>density_url &lt;- getURL(“<a href="https://raw.githubusercontent.com/ykzeng/covid-19/master/data/census-population-landarea.csv" class="uri">https://raw.githubusercontent.com/ykzeng/covid-19/master/data/census-population-landarea.csv</a>”) density_df &lt;- read_csv(density_url)</p>
-</div>
-<div id="get-usda-county-level-education-statistics" class="section level1">
-<h1>get USDA county-level education statistics</h1>
-<p>educ_url &lt;- getURL(“<a href="https://www.ers.usda.gov/webdocs/DataFiles/48747/Education.csv" class="uri">https://www.ers.usda.gov/webdocs/DataFiles/48747/Education.csv</a>”) educ_df &lt;- read_csv(educ_url)</p>
-</div>
-<div id="get-poverty-stats" class="section level1">
-<h1>get poverty stats</h1>
-<p>pov_url &lt;- getURL(“<a href="https://www.ers.usda.gov/webdocs/DataFiles/48747/PovertyEstimates.csv" class="uri">https://www.ers.usda.gov/webdocs/DataFiles/48747/PovertyEstimates.csv</a>”) pov_df &lt;- read_csv(pov_url)</p>
-</div>
-<div id="get-unemployment-stats" class="section level1">
-<h1>get unemployment stats</h1>
-<p>emp_url &lt;- getURL(“<a href="https://www.ers.usda.gov/webdocs/DataFiles/48747/Unemployment.csv" class="uri">https://www.ers.usda.gov/webdocs/DataFiles/48747/Unemployment.csv</a>”) emp_df &lt;- read_csv(emp_url)</p>
-</div>
-<div id="get-pop-stats" class="section level1">
-<h1>get pop stats</h1>
-<p>pop_url &lt;- getURL(“<a href="https://www.ers.usda.gov/webdocs/DataFiles/48747/PopulationEstimates.csv" class="uri">https://www.ers.usda.gov/webdocs/DataFiles/48747/PopulationEstimates.csv</a>”) pop_df &lt;- read_csv(pop_url)</p>
-</div>
-<div id="the-last-data-set-we-want-is-a-.csv-containing-countywide-election-data" class="section level1">
-<h1>the last data set we want is a .csv containing countywide election data</h1>
-</div>
-<div id="we-got-this-for-a-previous-project-and-the-code-to-generate-it-is" class="section level1">
-<h1>we got this for a previous project and the code to generate it is</h1>
-</div>
-<div id="contained-in-the-script-munging.py" class="section level1">
-<h1>contained in the script munging.py</h1>
-<p>vote_df &lt;- read_csv(‘data/pres_race_2020.csv’)</p>
-</div>
-<div id="wrangling-data--" class="section level1">
-<h1>—- WRANGLING DATA —-</h1>
-</div>
-<div id="there-are-a-few-changes-we-have-to-make-to-the-data-sets-before-we-can-join" class="section level1">
-<h1>There are a few changes we have to make to the data sets before we can join</h1>
-</div>
-<div id="we-need-to-widen-the-emp_df-and-pov_df-tables" class="section level1">
-<h1>1) We need to widen the emp_df and pov_df tables</h1>
-<p>pov_df &lt;- pov_df %&gt;% pivot_wider(names_from = Attribute, values_from = Value)</p>
-<p>emp_df &lt;- emp_df %&gt;% pivot_wider(names_from = Attribute, values_from = Value)</p>
-</div>
-<div id="the-census_df-is-missing-a-fips-column-and-instead-it-has-a-name-column" class="section level1">
-<h1>2) The census_df is missing a FIPS column, and instead it has a name column</h1>
-</div>
-<div id="we-can-repair-this-by-joining-it-to-another-table-that-contains-both-name-and-fips" class="section level1">
-<h1>we can repair this by joining it to another table that contains both name and FIPS</h1>
-</div>
-<div id="glimpsing-the-dataframes-weve-loaded-so-far-we-see-that-the" class="section level1">
-<h1>glimpsing the dataframes we’ve loaded so far, we see that the</h1>
-</div>
-<div id="employment-population-and-poverty-dataframes-have-poorly-formatted" class="section level1">
-<h1>employment, population, and poverty dataframes have poorly formatted</h1>
-</div>
-<div id="fipstxt-columns-in-fact-they-are-recorded-as-double-values-when-they" class="section level1">
-<h1>FIPStxt columns (in fact they are recorded as double values when they</h1>
-</div>
-<div id="should-be-character-strings" class="section level1">
-<h1>should be character strings)</h1>
-</div>
-<div id="as-the-fips-is-the-joining-key-we-need-it-to-be-in-a-standard-format" class="section level1">
-<h1>as the FIPS is the joining key we need it to be in a standard format</h1>
-</div>
-<div id="the-following-code-can-be-used-to-fix-the-faulty-fips-entries" class="section level1">
-<h1>the following code can be used to fix the faulty FIPS entries</h1>
-<p>prepend_zero &lt;- function(number_value){ char_value &lt;- as.character(number_value) if(str_length(char_value) &lt; 5){ char_value &lt;- paste(“0”,char_value, sep = &quot;&quot;) } char_value }</p>
-<p>prepend_zero &lt;- Vectorize(prepend_zero)</p>
-</div>
-<div id="now-we-can-actually-go-through-and-fix-the-fipstxt-columns-in" class="section level1">
-<h1>Now we can actually go through and fix the FIPStxt columns in</h1>
-</div>
-<div id="emp_df-pop_df-and-pov_df." class="section level1">
-<h1>emp_df, pop_df, and pov_df.</h1>
-</div>
-<div id="while-we-do-this-we-add-in-duplicates-of-the-valid-fips-columns" class="section level1">
-<h1>While we do this we add in duplicates of the (valid) FIPS columns</h1>
-</div>
-<div id="in-the-other-two-data-sets" class="section level1">
-<h1>in the other two data sets</h1>
-<p>density_df &lt;- density_df %&gt;% mutate(fips = prepend_zero(fips))</p>
-<p>pov_df &lt;- pov_df %&gt;% mutate(fips = prepend_zero(FIPStxt))</p>
-<p>emp_df &lt;- emp_df %&gt;% mutate(fips = prepend_zero(fips_txt))</p>
-<p>pop_df &lt;- pop_df %&gt;% mutate(fips = prepend_zero(FIPStxt))</p>
-<p>vote_df &lt;- vote_df %&gt;% rename(fips = geoid)</p>
-<p>educ_df &lt;- educ_df %&gt;% rename(fips = ‘FIPS Code’)</p>
-</div>
-<div id="add-in-dem_pct-and-gop_pct-to-the-vote_df" class="section level1">
-<h1>Add in dem_pct and gop_pct to the vote_df</h1>
-<p>vote_df &lt;- vote_df %&gt;% mutate(dem_pct = 100<em>votes_dem/(votes_dem+votes_gop), gop_pct = 100</em>votes_gop/(votes_dem+votes_gop) )</p>
-</div>
-<div id="add-in-categorical-variable-did-the-county-vote-demgop-in-2020-pres" class="section level1">
-<h1>Add in categorical variable (did the county vote Dem/GOP in 2020 Pres)</h1>
-</div>
-<div id="to-vote_df" class="section level1">
-<h1>to vote_df</h1>
-</div>
-<div id="probably-unnecessarily-we-write-a-little-function-to-make" class="section level1">
-<h1>Probably unnecessarily we write a little function to make</h1>
-</div>
-<div id="the-call-to-mutate-a-bit-simpler" class="section level1">
-<h1>the call to mutate a bit simpler</h1>
-<p>majority_vote &lt;- function(votes_dem, votes_gop){ vote = ‘D’ if(votes_dem &lt; votes_gop){ vote = ‘R’ } vote }</p>
-</div>
-<div id="whenever-youre-using-a-function-in-mutate-dont-forget-to-vectorize" class="section level1">
-<h1>whenever you’re using a function in mutate, don’t forget to vectorize!</h1>
-<p>majority_vote &lt;- Vectorize(majority_vote)</p>
-</div>
-<div id="now-we-create-the-majority-vote-categorical-var" class="section level1">
-<h1>now we create the majority vote categorical var</h1>
-<p>vote_df &lt;- vote_df %&gt;% mutate(majority = majority_vote(votes_dem, votes_gop))</p>
-<p>vote_df<span class="math inline">\(majority &lt;- as.factor(vote_df\)</span>majority)</p>
-</div>
-<div id="we-also-include-a-state-level-majority-to-decide-how-many-states-we" class="section level1">
-<h1>we also include a state-level majority to decide how many states we</h1>
-</div>
-<div id="classify-incorrectly" class="section level1">
-<h1>classify incorrectly</h1>
-<p>state_df &lt;- vote_df %&gt;% group_by(t_state_name) %&gt;% summarise(total_dem = sum(votes_dem), total_gop = sum(votes_gop)) %&gt;% mutate(state_majority = majority_vote(total_dem, total_gop))</p>
-<pre><code># %&gt;% group_by(t_state_name) 
-# %&gt;% summarise(total_dem = sum(votes_dem), total_gop = sum(votes_gop))
-# %&gt;% mutate(state_majority  = majority_vote(total_dem, total_gop))</code></pre>
-<p>state_df<span class="math inline">\(state_majority &lt;- as.factor(state_df\)</span>state_majority)</p>
-<p>vote_df &lt;- vote_df %&gt;% inner_join(state_df, by = ‘t_state_name’)</p>
-</div>
-<div id="joining-selecting-data--" class="section level1">
-<h1>—- JOINING + SELECTING DATA —-</h1>
-</div>
-<div id="combine-the-dataframes-together" class="section level1">
-<h1>combine the dataframes together</h1>
-</div>
-<div id="the-order-matters-because-the-helper-function-were-using-is-designed" class="section level1">
-<h1>the order matters, because the helper function we’re using is designed</h1>
-</div>
-<div id="to-be-applied-mainly-to-census_df-so-we-want-to-make-sure-the-counties" class="section level1">
-<h1>to be applied mainly to census_df, so we want to make sure the counties</h1>
-</div>
-<div id="come-out-in-the-order-specified-by-census_df." class="section level1">
-<h1>come out in the order specified by census_df.</h1>
-<p>df &lt;- census_df %&gt;% left_join(density_df, by = “fips”) %&gt;% left_join(educ_df, by = “fips”) %&gt;% left_join(emp_df, by = “fips”) %&gt;% left_join(pop_df, by = “fips”) %&gt;% left_join(pov_df, by = “fips”) %&gt;% left_join(vote_df, by = “fips”)</p>
-</div>
-<div id="choose-variables-of-interest." class="section level1">
-<h1>choose variables of interest.</h1>
-</div>
-<div id="there-are-hundreds-of-variables-in-df-currently-far-more-than-we-need" class="section level1">
-<h1>there are hundreds of variables in df currently, far more than we need</h1>
-</div>
-<div id="well-just-choose-a-few-that-based-on-popular-discourse-seem-likely-to" class="section level1">
-<h1>we’ll just choose a few that, based on popular discourse, seem likely to</h1>
-</div>
-<div id="influence-the-election-outcome-of-a-county." class="section level1">
-<h1>influence the election outcome of a county.</h1>
-</div>
-<div id="from-census_df-well-take-total.pop-as-well-as-white-black-hispanic-asian" class="section level1">
-<h1>From census_df we’ll take total.pop as well as white, black, hispanic, asian</h1>
-</div>
-<div id="from-density_df-well-just-take-population-density-pplsq-mi.-which" class="section level1">
-<h1>From density_df we’ll just take population density (ppl/sq mi.) which</h1>
-</div>
-<div id="is-labeled-as-pop060210" class="section level1">
-<h1>is labeled as POP060210</h1>
-</div>
-<div id="from-educ_df-we-will-take-the-variables-all-self-explanatory" class="section level1">
-<h1>From educ_df we will take the variables (all self-explanatory):</h1>
-</div>
-<div id="percent-of-adults-with-less-than-a-high-school-diploma-2015-19" class="section level1">
-<h1>Percent of adults with less than a high school diploma, 2015-19</h1>
-</div>
-<div id="percent-of-adults-with-a-high-school-diploma-only-2015-19" class="section level1">
-<h1>Percent of adults with a high school diploma only, 2015-19</h1>
-</div>
-<div id="percent-of-adults-completing-some-college-or-associates-degree-2015-19" class="section level1">
-<h1>Percent of adults completing some college or associate’s degree, 2015-19</h1>
-</div>
-<div id="percent-of-adults-with-a-bachelors-degree-or-higher-2015-19" class="section level1">
-<h1>Percent of adults with a bachelor’s degree or higher, 2015-19</h1>
+<div id="joining-selecting-data" class="section level1">
+<h1>JOINING + SELECTING DATA</h1>
+<p>Combine the dataframes together</p>
+<p>The order matters, because the helper function we’re using is designed to be applied mainly to census_df, so we want to make sure the counties come out in the order specified by census_df.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5kZiA8LSBjZW5zdXNfZGYgJT4lXG4gICAgbGVmdF9qb2luKGRlbnNpdHlfZGYsIGJ5ID0gXCJmaXBzXCIpICU+JVxuICAgIGxlZnRfam9pbihlZHVjX2RmLCBieSA9IFwiZmlwc1wiKSAlPiVcbiAgICBsZWZ0X2pvaW4oZW1wX2RmLCBieSA9IFwiZmlwc1wiKSAlPiVcbiAgICBsZWZ0X2pvaW4ocG9wX2RmLCBieSA9IFwiZmlwc1wiKSAlPiVcbiAgICBsZWZ0X2pvaW4ocG92X2RmLCBieSA9IFwiZmlwc1wiKSAlPiVcbiAgICBsZWZ0X2pvaW4odm90ZV9kZiwgYnkgPSBcImZpcHNcIilcblxuYGBgIn0= -->
+<pre class="r"><code>
+df &lt;- census_df %&gt;%
+    left_join(density_df, by = &quot;fips&quot;) %&gt;%
+    left_join(educ_df, by = &quot;fips&quot;) %&gt;%
+    left_join(emp_df, by = &quot;fips&quot;) %&gt;%
+    left_join(pop_df, by = &quot;fips&quot;) %&gt;%
+    left_join(pov_df, by = &quot;fips&quot;) %&gt;%
+    left_join(vote_df, by = &quot;fips&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>We need to choose variables of interest. There are hundreds of variables in df currently, far more than we need. We’ll just choose a few that, based on popular discourse, seem likely to influence the election outcome of a county.</p>
+<ul>
+<li><p>From census_df we’ll take:</p>
+<ul>
+<li>total.pop</li>
+<li>white</li>
+<li>black</li>
+<li>hispanic</li>
+<li>asian</li>
+</ul></li>
+<li><p>From density_df we’ll just take:</p></li>
+<li><p>Population density (ppl/sq mi.) which is labeled as POP060210</p></li>
+<li><p>From educ_df we will take the (fairly self-explanatory) variables:</p></li>
+<li>Percent of adults with less than a high school diploma, 2015-19</li>
+<li>Percent of adults with a high school diploma only, 2015-19</li>
+<li>Percent of adults completing some college or associate’s degree, 2015-19</li>
+<li><p>Percent of adults with a bachelor’s degree or higher, 2015-19</p></li>
+</ul>
 </div>
 <div id="from-emp_df-we-will-take-the-variables" class="section level1">
 <h1>From emp_df we will take the variables</h1>
@@ -2077,7 +2201,7 @@ pre code {
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgQW5hbHlzaXM6IFByZXNpZGVudGlhbCBWb3RpbmcgYnkgQ291bnR5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCiMgLS0tLUxPQURJTkcgTElCUkFSSUVTICAtLS0tCgojIHdlIHByb2JhYmx5IGRvbid0IG5lZWQgdGhlIHdob2xlIHRpZHllcnNlIGJ1dCAKIyBpdCdzIGEgYml0IGVhc2llcgoKCmxpYnJhcnkoc2hpbnkpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KFJDdXJsKQpsaWJyYXJ5KHJwYXJ0KQpsaWJyYXJ5KG1hcHMpCmxpYnJhcnkobWFwcHJvaikKbGlicmFyeShycGFydC5wbG90KQoKIyAtLS0tTE9BRElORyBEQVRBIC0tLS0KCiMgZ2V0IDIwMTAgVVMgY2Vuc3VzIGRhdGEgKGRhdGEgb24gY291bnR5LWxldmVsIHJhY2lhbCBjb21wb3NpdGlvbikKCmNlbnN1c19kZiA8LSByZWFkUkRTKCJkYXRhL2NlbnN1cy5yZHMiKQpjZW5zdXNfZGYgPC0gYXNfdGliYmxlKGNlbnN1c19kZikKY2Vuc3VzX2RmIDwtIGNlbnN1c19kZiAlPiUKICAgIHJlbmFtZSh0b3RhbF9wb3AgPSB0b3RhbC5wb3ApCgojIGdldCBwb3B1bGF0aW9uIGRlbnNpdHkgZGF0YSAKCmRlbnNpdHlfdXJsIDwtIGdldFVSTCgiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3lremVuZy9jb3ZpZC0xOS9tYXN0ZXIvZGF0YS9jZW5zdXMtcG9wdWxhdGlvbi1sYW5kYXJlYS5jc3YiKQpkZW5zaXR5X2RmIDwtIHJlYWRfY3N2KGRlbnNpdHlfdXJsKQoKIyBnZXQgVVNEQSBjb3VudHktbGV2ZWwgZWR1Y2F0aW9uIHN0YXRpc3RpY3MKCmVkdWNfdXJsIDwtIGdldFVSTCgiaHR0cHM6Ly93d3cuZXJzLnVzZGEuZ292L3dlYmRvY3MvRGF0YUZpbGVzLzQ4NzQ3L0VkdWNhdGlvbi5jc3YiKQplZHVjX2RmIDwtIHJlYWRfY3N2KGVkdWNfdXJsKQoKIyBnZXQgcG92ZXJ0eSBzdGF0cwoKcG92X3VybCA8LSBnZXRVUkwoImh0dHBzOi8vd3d3LmVycy51c2RhLmdvdi93ZWJkb2NzL0RhdGFGaWxlcy80ODc0Ny9Qb3ZlcnR5RXN0aW1hdGVzLmNzdiIpCnBvdl9kZiA8LSByZWFkX2Nzdihwb3ZfdXJsKQoKIyBnZXQgdW5lbXBsb3ltZW50IHN0YXRzIAoKZW1wX3VybCA8LSAgZ2V0VVJMKCJodHRwczovL3d3dy5lcnMudXNkYS5nb3Yvd2ViZG9jcy9EYXRhRmlsZXMvNDg3NDcvVW5lbXBsb3ltZW50LmNzdiIpCmVtcF9kZiA8LSByZWFkX2NzdihlbXBfdXJsKQoKIyBnZXQgcG9wIHN0YXRzIAoKcG9wX3VybCA8LSBnZXRVUkwoImh0dHBzOi8vd3d3LmVycy51c2RhLmdvdi93ZWJkb2NzL0RhdGFGaWxlcy80ODc0Ny9Qb3B1bGF0aW9uRXN0aW1hdGVzLmNzdiIpCnBvcF9kZiA8LSByZWFkX2Nzdihwb3BfdXJsKQoKIyB0aGUgbGFzdCBkYXRhIHNldCB3ZSB3YW50IGlzIGEgLmNzdiBjb250YWluaW5nIGNvdW50eXdpZGUgZWxlY3Rpb24gZGF0YQojIHdlIGdvdCB0aGlzIGZvciBhIHByZXZpb3VzIHByb2plY3QgYW5kIHRoZSBjb2RlIHRvIGdlbmVyYXRlIGl0IGlzIAojIGNvbnRhaW5lZCBpbiB0aGUgc2NyaXB0IG11bmdpbmcucHkKCnZvdGVfZGYgPC0gcmVhZF9jc3YoJ2RhdGEvcHJlc19yYWNlXzIwMjAuY3N2JykKCgoKCiMgLS0tLSBXUkFOR0xJTkcgREFUQSAtLS0tCgojIFRoZXJlIGFyZSBhIGZldyBjaGFuZ2VzIHdlIGhhdmUgdG8gbWFrZSB0byB0aGUgZGF0YSBzZXRzIGJlZm9yZSB3ZSBjYW4gam9pbgoKCgojIDEpIFdlIG5lZWQgdG8gd2lkZW4gdGhlIGVtcF9kZiBhbmQgcG92X2RmIHRhYmxlcwoKcG92X2RmIDwtIHBvdl9kZiAlPiUKICAgIHBpdm90X3dpZGVyKG5hbWVzX2Zyb20gPSBBdHRyaWJ1dGUsCiAgICAgICAgICAgICAgICB2YWx1ZXNfZnJvbSA9IFZhbHVlKSAKCmVtcF9kZiA8LSBlbXBfZGYgJT4lCiAgICBwaXZvdF93aWRlcihuYW1lc19mcm9tID0gQXR0cmlidXRlLAogICAgICAgICAgICAgICAgdmFsdWVzX2Zyb20gPSBWYWx1ZSkKCiMgMikgVGhlIGNlbnN1c19kZiBpcyBtaXNzaW5nIGEgRklQUyBjb2x1bW4sIGFuZCBpbnN0ZWFkIGl0IGhhcyBhIG5hbWUgY29sdW1uCgojIHdlIGNhbiByZXBhaXIgdGhpcyBieSBqb2luaW5nIGl0IHRvIGFub3RoZXIgdGFibGUgdGhhdCBjb250YWlucyBib3RoIG5hbWUgYW5kIEZJUFMKCiMgZ2xpbXBzaW5nIHRoZSBkYXRhZnJhbWVzIHdlJ3ZlIGxvYWRlZCBzbyBmYXIsIHdlIHNlZSB0aGF0IHRoZSAKIyBlbXBsb3ltZW50LCBwb3B1bGF0aW9uLCBhbmQgcG92ZXJ0eSBkYXRhZnJhbWVzIGhhdmUgcG9vcmx5IGZvcm1hdHRlZAojIEZJUFN0eHQgY29sdW1ucyAoaW4gZmFjdCB0aGV5IGFyZSByZWNvcmRlZCBhcyBkb3VibGUgdmFsdWVzIHdoZW4gdGhleSAKIyBzaG91bGQgYmUgY2hhcmFjdGVyIHN0cmluZ3MpCgojIGFzIHRoZSBGSVBTIGlzIHRoZSBqb2luaW5nIGtleSB3ZSBuZWVkIGl0IHRvIGJlIGluIGEgc3RhbmRhcmQgZm9ybWF0CgojIHRoZSBmb2xsb3dpbmcgY29kZSBjYW4gYmUgdXNlZCB0byBmaXggdGhlIGZhdWx0eSBGSVBTIGVudHJpZXMKCnByZXBlbmRfemVybyA8LSBmdW5jdGlvbihudW1iZXJfdmFsdWUpewogICAgY2hhcl92YWx1ZSA8LSBhcy5jaGFyYWN0ZXIobnVtYmVyX3ZhbHVlKQogICAgaWYoc3RyX2xlbmd0aChjaGFyX3ZhbHVlKSA8IDUpewogICAgICAgIGNoYXJfdmFsdWUgPC0gcGFzdGUoIjAiLGNoYXJfdmFsdWUsIHNlcCA9ICIiKQogICAgfQogICAgY2hhcl92YWx1ZQp9CgpwcmVwZW5kX3plcm8gPC0gVmVjdG9yaXplKHByZXBlbmRfemVybykKCgojIE5vdyB3ZSBjYW4gYWN0dWFsbHkgZ28gdGhyb3VnaCBhbmQgZml4IHRoZSBGSVBTdHh0IGNvbHVtbnMgaW4gCiMgZW1wX2RmLCBwb3BfZGYsIGFuZCBwb3ZfZGYuCgojIFdoaWxlIHdlIGRvIHRoaXMgd2UgYWRkIGluIGR1cGxpY2F0ZXMgb2YgdGhlICh2YWxpZCkgRklQUyBjb2x1bW5zCiMgaW4gdGhlIG90aGVyIHR3byBkYXRhIHNldHMKCmRlbnNpdHlfZGYgPC0gZGVuc2l0eV9kZiAlPiUKICAgIG11dGF0ZShmaXBzID0gcHJlcGVuZF96ZXJvKGZpcHMpKQoKcG92X2RmIDwtIHBvdl9kZiAlPiUKICAgIG11dGF0ZShmaXBzID0gcHJlcGVuZF96ZXJvKEZJUFN0eHQpKQoKZW1wX2RmIDwtIGVtcF9kZiAlPiUKICAgIG11dGF0ZShmaXBzID0gcHJlcGVuZF96ZXJvKGZpcHNfdHh0KSkKCnBvcF9kZiA8LSBwb3BfZGYgJT4lCiAgICBtdXRhdGUoZmlwcyA9IHByZXBlbmRfemVybyhGSVBTdHh0KSkKCnZvdGVfZGYgPC0gdm90ZV9kZiAlPiUKICAgIHJlbmFtZShmaXBzID0gZ2VvaWQpCgplZHVjX2RmIDwtIGVkdWNfZGYgJT4lCiAgICByZW5hbWUoZmlwcyA9ICdGSVBTIENvZGUnKQoKIyBBZGQgaW4gZGVtX3BjdCBhbmQgZ29wX3BjdCB0byB0aGUgdm90ZV9kZgoKdm90ZV9kZiA8LSB2b3RlX2RmICU+JQogICAgbXV0YXRlKGRlbV9wY3QgPSAxMDAqdm90ZXNfZGVtLyh2b3Rlc19kZW0rdm90ZXNfZ29wKSwKICAgICAgICAgICBnb3BfcGN0ID0gMTAwKnZvdGVzX2dvcC8odm90ZXNfZGVtK3ZvdGVzX2dvcCkKICAgICkKCiMgQWRkIGluIGNhdGVnb3JpY2FsIHZhcmlhYmxlIChkaWQgdGhlIGNvdW50eSB2b3RlIERlbS9HT1AgaW4gMjAyMCBQcmVzKQojIHRvIHZvdGVfZGYKCiMgUHJvYmFibHkgdW5uZWNlc3NhcmlseSB3ZSB3cml0ZSBhIGxpdHRsZSBmdW5jdGlvbiB0byBtYWtlIAojIHRoZSBjYWxsIHRvIG11dGF0ZSBhIGJpdCBzaW1wbGVyCgptYWpvcml0eV92b3RlIDwtIGZ1bmN0aW9uKHZvdGVzX2RlbSwgdm90ZXNfZ29wKXsKICAgIHZvdGUgPSAnRCcKICAgIGlmKHZvdGVzX2RlbSA8IHZvdGVzX2dvcCl7CiAgICAgICAgdm90ZSA9ICdSJwogICAgfQogICAgdm90ZQp9CgojIHdoZW5ldmVyIHlvdSdyZSB1c2luZyBhIGZ1bmN0aW9uIGluIG11dGF0ZSwgZG9uJ3QgZm9yZ2V0IHRvIHZlY3Rvcml6ZSEKCm1ham9yaXR5X3ZvdGUgPC0gVmVjdG9yaXplKG1ham9yaXR5X3ZvdGUpCgojIG5vdyB3ZSBjcmVhdGUgdGhlIG1ham9yaXR5IHZvdGUgY2F0ZWdvcmljYWwgdmFyCgp2b3RlX2RmIDwtIHZvdGVfZGYgJT4lCiAgICBtdXRhdGUobWFqb3JpdHkgPSBtYWpvcml0eV92b3RlKHZvdGVzX2RlbSwgdm90ZXNfZ29wKSkKICAgIAp2b3RlX2RmJG1ham9yaXR5IDwtIGFzLmZhY3Rvcih2b3RlX2RmJG1ham9yaXR5KQoKCgojIHdlIGFsc28gaW5jbHVkZSBhIHN0YXRlLWxldmVsIG1ham9yaXR5IHRvIGRlY2lkZSBob3cgbWFueSBzdGF0ZXMgd2UgCiMgY2xhc3NpZnkgaW5jb3JyZWN0bHkKCgoKc3RhdGVfZGYgPC0gdm90ZV9kZiAlPiUKICAgIGdyb3VwX2J5KHRfc3RhdGVfbmFtZSkgJT4lCiAgICBzdW1tYXJpc2UodG90YWxfZGVtID0gc3VtKHZvdGVzX2RlbSksIAogICAgICAgICAgICAgIHRvdGFsX2dvcCA9IHN1bSh2b3Rlc19nb3ApKSAlPiUKICAgIG11dGF0ZShzdGF0ZV9tYWpvcml0eSA9IG1ham9yaXR5X3ZvdGUodG90YWxfZGVtLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0b3RhbF9nb3ApKQoKCiAgICAjICU+JSBncm91cF9ieSh0X3N0YXRlX25hbWUpIAogICAgIyAlPiUgc3VtbWFyaXNlKHRvdGFsX2RlbSA9IHN1bSh2b3Rlc19kZW0pLCB0b3RhbF9nb3AgPSBzdW0odm90ZXNfZ29wKSkKICAgICMgJT4lIG11dGF0ZShzdGF0ZV9tYWpvcml0eSAgPSBtYWpvcml0eV92b3RlKHRvdGFsX2RlbSwgdG90YWxfZ29wKSkKCnN0YXRlX2RmJHN0YXRlX21ham9yaXR5IDwtIGFzLmZhY3RvcihzdGF0ZV9kZiRzdGF0ZV9tYWpvcml0eSkKCnZvdGVfZGYgPC0gdm90ZV9kZiAlPiUKICAgIGlubmVyX2pvaW4oc3RhdGVfZGYsIGJ5ID0gJ3Rfc3RhdGVfbmFtZScpCgoKIyAtLS0tIEpPSU5JTkcgKyBTRUxFQ1RJTkcgREFUQSAtLS0tCgojIGNvbWJpbmUgdGhlIGRhdGFmcmFtZXMgdG9nZXRoZXIKCiMgdGhlIG9yZGVyIG1hdHRlcnMsIGJlY2F1c2UgdGhlIGhlbHBlciBmdW5jdGlvbiB3ZSdyZSB1c2luZyBpcyBkZXNpZ25lZAojIHRvIGJlIGFwcGxpZWQgbWFpbmx5IHRvIGNlbnN1c19kZiwgc28gd2Ugd2FudCB0byBtYWtlIHN1cmUgdGhlIGNvdW50aWVzCiMgY29tZSBvdXQgaW4gdGhlIG9yZGVyIHNwZWNpZmllZCBieSBjZW5zdXNfZGYuIAoKZGYgPC0gY2Vuc3VzX2RmICU+JQogICAgbGVmdF9qb2luKGRlbnNpdHlfZGYsIGJ5ID0gImZpcHMiKSAlPiUKICAgIGxlZnRfam9pbihlZHVjX2RmLCBieSA9ICJmaXBzIikgJT4lCiAgICBsZWZ0X2pvaW4oZW1wX2RmLCBieSA9ICJmaXBzIikgJT4lCiAgICBsZWZ0X2pvaW4ocG9wX2RmLCBieSA9ICJmaXBzIikgJT4lCiAgICBsZWZ0X2pvaW4ocG92X2RmLCBieSA9ICJmaXBzIikgJT4lCiAgICBsZWZ0X2pvaW4odm90ZV9kZiwgYnkgPSAiZmlwcyIpCgoKIyBjaG9vc2UgdmFyaWFibGVzIG9mIGludGVyZXN0LiAKIyB0aGVyZSBhcmUgaHVuZHJlZHMgb2YgdmFyaWFibGVzIGluIGRmIGN1cnJlbnRseSwgZmFyIG1vcmUgdGhhbiB3ZSBuZWVkCgojIHdlJ2xsIGp1c3QgY2hvb3NlIGEgZmV3IHRoYXQsIGJhc2VkIG9uIHBvcHVsYXIgZGlzY291cnNlLCBzZWVtIGxpa2VseSB0bwojIGluZmx1ZW5jZSB0aGUgZWxlY3Rpb24gb3V0Y29tZSBvZiBhIGNvdW50eS4gCgojIEZyb20gY2Vuc3VzX2RmIHdlJ2xsIHRha2UgdG90YWwucG9wIGFzIHdlbGwgYXMgd2hpdGUsIGJsYWNrLCBoaXNwYW5pYywgYXNpYW4KCiMgRnJvbSBkZW5zaXR5X2RmIHdlJ2xsIGp1c3QgdGFrZSBwb3B1bGF0aW9uIGRlbnNpdHkgKHBwbC9zcSBtaS4pIHdoaWNoIAojIGlzIGxhYmVsZWQgYXMgUE9QMDYwMjEwCgojIEZyb20gZWR1Y19kZiB3ZSB3aWxsIHRha2UgdGhlIHZhcmlhYmxlcyAoYWxsIHNlbGYtZXhwbGFuYXRvcnkpOiAKCiMgUGVyY2VudCBvZiBhZHVsdHMgd2l0aCBsZXNzIHRoYW4gYSBoaWdoIHNjaG9vbCBkaXBsb21hLCAyMDE1LTE5CiMgUGVyY2VudCBvZiBhZHVsdHMgd2l0aCBhIGhpZ2ggc2Nob29sIGRpcGxvbWEgb25seSwgMjAxNS0xOQojIFBlcmNlbnQgb2YgYWR1bHRzIGNvbXBsZXRpbmcgc29tZSBjb2xsZWdlIG9yIGFzc29jaWF0ZSdzIGRlZ3JlZSwgMjAxNS0xOQojIFBlcmNlbnQgb2YgYWR1bHRzIHdpdGggYSBiYWNoZWxvcidzIGRlZ3JlZSBvciBoaWdoZXIsIDIwMTUtMTkKCiMgRnJvbSBlbXBfZGYgd2Ugd2lsbCB0YWtlIHRoZSB2YXJpYWJsZXMgCgojIFVuZW1wbG95bWVudF9yYXRlXzIwMTkKIyBNZWRpYW5fSG91c2Vob2xkX0luY29tZV8yMDE5CiMgTWVkX0hIX0luY29tZV9QZXJjZW50X29mX1N0YXRlX1RvdGFsXzIwMTkKIyBSdXJhbF91cmJhbl9jb250aW51dW1fY29kZV8yMDEzCiMgVXJiYW5faW5mbHVlbmNlX2NvZGVfMjAxMyAgCiMgTWV0cm9fMjAxMwoKIyBUaGUgZmlyc3QgdGhyZWUgb2YgdGhlc2UgYXJlIHNlbGYtZXhwbGFuYXRvcnkgKCdISCc9SG91c2Vob2xkKQoKIyBUaGUgbGFzdCB0aHJlZSBhcmUgb3JkaW5hbCB2YXJpYWJsZXMgdGhhdCBkZXNjcmliZSBob3cgcnVyYWwvdXJiYW4KIyBhIGNvdW50eSBpcy4gCgojIFRoZSBkb2N1bWVudGF0aW9uIGZvciB0aGVzZSBpcyBhdmFpbGFibGUgZm9yIGRvd25sb2FkIGFsb25nIHdpdGggdGhlIGRhdGEgc2V0cwojIGF0IGh0dHBzOi8vd3d3LmVycy51c2RhLmdvdi9kYXRhLXByb2R1Y3RzL2NvdW50eS1sZXZlbC1kYXRhLXNldHMvZG93bmxvYWQtZGF0YS8KCiMgRm9yIGV4YW1wbGUsIHRoZSBVcmJhbiBJbmZsdWVuY2UgY29kZSBhc3NpZ25zIHZhbHVlcyBvbiBhIDEtMTIgc2NhbGUKCQkKIyAxCUluIGxhcmdlIG1ldHJvIGFyZWEgb2YgMSsgbWlsbGlvbiByZXNpZGVudHMJCQkKIyAyCUluIHNtYWxsIG1ldHJvIGFyZWEgb2YgbGVzcyB0aGFuIDEgbWlsbGlvbiByZXNpZGVudHMJCQkKIyAuLi4JCQojIDExCU5vbmNvcmUgbm90IGFkamFjZW50IHRvIG1ldHJvIG9yIG1pY3JvIGFyZWEgYW5kIGNvbnRhaW5zIGEgdG93biBvZiBhdCBsZWFzdCAyLDUwMCByZXNpZGVudHMJCQkKIyAxMglOb25jb3JlIG5vdCBhZGphY2VudCB0byBtZXRybyBvciBtaWNybyBhcmVhIGFuZCBkb2VzIG5vdCBjb250YWluIGEgdG93biBvZiBhdCBsZWFzdCAyLDUwMCByZXNpZGVudHMJCQkKCiMgVGhlIHBvcHVsYXRpb24gc3RhdGlzdGljcyBkYXRhc2V0IGlzIHBhcnRpY3VsYXJseSBiaWcsIDE2NiB2YXJpYWJsZXMKCiMgQ2hvb3NpbmcgdGhlIGZvbGxvd2luZzogCgojIFBPUF9FU1RJTUFURV8yMDE5CiMgTl9QT1BfQ0hHXzIwMTkgKHBvcHVsYXRpb24gY2hhbmdlIGluIHRoZSB5ZWFyIDIwMTkpCiMgUl9OQVRVUkFMX0lOQ18yMDE5IChuYXR1cmFsIGluY3JlYXNlID0gYmlydGggcmF0ZS1kZWF0aCByYXRlKQojIElOVEVSTkFUSU9OQUxfTUlHXzIwMTkgKGludGVybmF0aW9uYWwgbWlncmF0aW9uIHRvIHRoaXMgRklQUykKCiMgVGhlIHBvdmVyeSBkYXRhc2V0IGhhcyBvbmx5IDM0IHZhcmlhYmxlcywgd2UnbGwgdGFrZQojIFBDVFBPVkFMTF8yMDE5IChwY3Qgb2YgcG9wdWxhdGlvbiBpbiBwb3ZlcnR5IGluIDIwMTkpCiMgUE9WMDE3XzIwMTkJRXN0aW1hdGUgb2YgcGVvcGxlIGFnZSAwLTE3IGluIHBvdmVydHkgMjAxOQoKIyBUaGUgdm90ZSBkYXRhc2V0IG9ubHkgY29udHJpYnV0ZXMgdGhlIHZhcmlhYmxlIG1ham9yaXR5Cgpnb29kX2NvbHVtbnMgPC0gYyggCiAgICAgICAgICAgICAgICAgICJmaXBzIiwKICAgICAgICAgICAgICAgICAgInRvdGFsX3BvcCIsCiAgICAgICAgICAgICAgICAgICJ3aGl0ZSIsCiAgICAgICAgICAgICAgICAgICJibGFjayIsCiAgICAgICAgICAgICAgICAgICJoaXNwYW5pYyIsCiAgICAgICAgICAgICAgICAgICJhc2lhbiIsCiAgICAgICAgICAgICAgICAgICJQZXJjZW50IG9mIGFkdWx0cyB3aXRoIGxlc3MgdGhhbiBhIGhpZ2ggc2Nob29sIGRpcGxvbWEsIDIwMTUtMTkiLCAKICAgICAgICAgICAgICAgICAgIlBlcmNlbnQgb2YgYWR1bHRzIHdpdGggYSBoaWdoIHNjaG9vbCBkaXBsb21hIG9ubHksIDIwMTUtMTkiLAogICAgICAgICAgICAgICAgICAiUGVyY2VudCBvZiBhZHVsdHMgY29tcGxldGluZyBzb21lIGNvbGxlZ2Ugb3IgYXNzb2NpYXRlJ3MgZGVncmVlLCAyMDE1LTE5IiwKICAgICAgICAgICAgICAgICAgIlBlcmNlbnQgb2YgYWR1bHRzIHdpdGggYSBiYWNoZWxvcidzIGRlZ3JlZSBvciBoaWdoZXIsIDIwMTUtMTkiLAogICAgICAgICAgICAgICAgICAiVW5lbXBsb3ltZW50X3JhdGVfMjAxOSIsCiAgICAgICAgICAgICAgICAgICJNZWRpYW5fSG91c2Vob2xkX0luY29tZV8yMDE5IiwKICAgICAgICAgICAgICAgICAgIk1lZF9ISF9JbmNvbWVfUGVyY2VudF9vZl9TdGF0ZV9Ub3RhbF8yMDE5IiwKICAgICAgICAgICAgICAgICAgIlJ1cmFsX3VyYmFuX2NvbnRpbnV1bV9jb2RlXzIwMTMiLAogICAgICAgICAgICAgICAgICAiVXJiYW5faW5mbHVlbmNlX2NvZGVfMjAxMyIsCiAgICAgICAgICAgICAgICAgICJNZXRyb18yMDEzIiwKICAgICAgICAgICAgICAgICAgIlBPUF9FU1RJTUFURV8yMDE5IiwKICAgICAgICAgICAgICAgICAgIk5fUE9QX0NIR18yMDE5IiwKICAgICAgICAgICAgICAgICAgIlJfTkFUVVJBTF9JTkNfMjAxOSIsCiAgICAgICAgICAgICAgICAgICJJTlRFUk5BVElPTkFMX01JR18yMDE5IiwKICAgICAgICAgICAgICAgICAgIlBDVFBPVkFMTF8yMDE5IiwKICAgICAgICAgICAgICAgICAgIlBPVjAxN18yMDE5IiwKICAgICAgICAgICAgICAgICAgIlBPUDA2MDIxMCIsCiAgICAgICAgICAgICAgICAgICJtYWpvcml0eSIpCgptYWluX2RmIDwtIGRmICU+JQogICAgc2VsZWN0KGFsbF9vZihnb29kX2NvbHVtbnMpKQoKbWFpbl9kZiA8LSBtYWluX2RmICU+JQogICAgcmVuYW1lKCJub19oaWdoX3NjaCIgPSAiUGVyY2VudCBvZiBhZHVsdHMgd2l0aCBsZXNzIHRoYW4gYSBoaWdoIHNjaG9vbCBkaXBsb21hLCAyMDE1LTE5IiwKICAgICAgICAgICAiaGlnaF9zY2glIiA9ICJQZXJjZW50IG9mIGFkdWx0cyB3aXRoIGEgaGlnaCBzY2hvb2wgZGlwbG9tYSBvbmx5LCAyMDE1LTE5IiwKICAgICAgICAgICAic29tZV9jb2wlIiA9ICJQZXJjZW50IG9mIGFkdWx0cyBjb21wbGV0aW5nIHNvbWUgY29sbGVnZSBvciBhc3NvY2lhdGUncyBkZWdyZWUsIDIwMTUtMTkiLAogICAgICAgICAgICJjb2xsZWdlJSIgPSAiUGVyY2VudCBvZiBhZHVsdHMgd2l0aCBhIGJhY2hlbG9yJ3MgZGVncmVlIG9yIGhpZ2hlciwgMjAxNS0xOSIsCiAgICAgICAgICAgInVuZW1wbG95bWVudCIgPSAiVW5lbXBsb3ltZW50X3JhdGVfMjAxOSIsCiAgICAgICAgICAgIm1lZF9oaF9pbmNvbWUiID0gIk1lZGlhbl9Ib3VzZWhvbGRfSW5jb21lXzIwMTkiLAogICAgICAgICAgICJtZWRfaGhfaW5jb21lX3BjdF9zdGF0ZSIgPSAiTWVkX0hIX0luY29tZV9QZXJjZW50X29mX1N0YXRlX1RvdGFsXzIwMTkiLAogICAgICAgICAgICJydXJhbF91cmJhbl9jb250aW51dW0iID0gIlJ1cmFsX3VyYmFuX2NvbnRpbnV1bV9jb2RlXzIwMTMiLAogICAgICAgICAgICJ1cmJhbl9pbmZsdWVuY2UiID0gIlVyYmFuX2luZmx1ZW5jZV9jb2RlXzIwMTMiLAogICAgICAgICAgICJtZXRyb19jb2RlIiA9ICJNZXRyb18yMDEzIiwKICAgICAgICAgICAicG9wdWxhdGlvbiIgPSAiUE9QX0VTVElNQVRFXzIwMTkiLAogICAgICAgICAgICJwb3BfY2hhbmdlIiA9ICJOX1BPUF9DSEdfMjAxOSIsCiAgICAgICAgICAgIm5hdF9pbmNyX3JhdGUiID0gIlJfTkFUVVJBTF9JTkNfMjAxOSIsCiAgICAgICAgICAgImludGxfbWlncmF0aW9uIiA9ICJJTlRFUk5BVElPTkFMX01JR18yMDE5IiwKICAgICAgICAgICAicG92ZXJ0eV9wY3QiID0gIlBDVFBPVkFMTF8yMDE5IiwKICAgICAgICAgICAiY2hpbGRfcG92ZXJ0eSIgPSAiUE9WMDE3XzIwMTkiLAogICAgICAgICAgICJwcGxfcGVyX3NxX21pIiA9ICJQT1AwNjAyMTAiCiAgICAgICAgICAgKQoKCiMgLS0tLSBDQUxJQlJBVElORyBERUNJU0lPTiBUUkVFUyAtLS0tCgojIHdlIG5lZWQgdG8gc3BsaXQgbWFpbl9kZiBpbnRvIGEgdHJhaW5pbmcgc2V0IGFuZCBhIHRlc3Qgc2V0CgoKIyBjcmVhdGUgaWRzIAoKbWFpbl9kZiA8LSBtYWluX2RmICU+JSAKICAgIG11dGF0ZShpZCA9IHJvd19udW1iZXIoKSkKIyBjaGVjayB0aGUgaWRzIApoZWFkKG1haW5fZGYkaWQpCgojIG1ha2UgYSB0cmFpbmluZyBzZXQKdHJhaW4gPC0gbWFpbl9kZiAlPiUgc2FtcGxlX2ZyYWMoLjcwKQoKIyBtYWtlIGEgdGVzdCBzZXQKdGVzdCAgPC0gYW50aV9qb2luKG1haW5fZGYsIHRyYWluLCBieSA9ICdpZCcpCgojIFIncyBkZWNpc2lvbiB0cmVlIGxpYnJhcnkgY29tcGxhaW5zIGEgbG90IGlmIHRoZXJlIGlzIGEgbG90IG9mIG1pc3NpbmcgZGF0YSAKIyBXZSB0YWtlIHRoZSBsYXp5IHJvdXRlIGFuZCBqdXN0IG9taXQgdGhlIGRhdGEgaWYgc29tZXRoaW5nIGlzIG1pc3NpbmcKCiMgd2Ugd2FudCB0byBwcmVkaWN0IG91dGNvbWUgKG1ham9yaXR5KSB3aXRoIHRoZSBmcmVlZG9tCiMgdG8gdXNlIGV2ZXJ5IHZhcmlhYmxlIGV4Y2VwdCBmb3IgZmlwcyAodG9vIHNwZWNpZmljKQoKIyB0cmFpbiB0cmVlCnRyZWVfbWFqb3JpdHkgPC0gcnBhcnQobWFqb3JpdHl+Li1maXBzLAogICAgICAgICAgICAgICAgICAgICAgIG1ldGhvZCA9ICJjbGFzcyIsIAogICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBuYS5vbWl0KG1haW5fZGYpLAogICAgICAgICAgICAgICAgICAgICAgIGNwID0gMC4wMDEpCgoKIyBwbG90IHRyZWUKcHJwKHRyZWVfbWFqb3JpdHksIAogICAgdW5pZm9ybT1UUlVFLAogICAgbWFpbj0iV2hpY2ggd2F5IGRvZXMgYSBjb3VudHkgdm90ZT8iLCAKICAgIE1hcmdpbiA9IDAuMSwKICAgIGJvcmRlci5jb2wgPSAiYmxhY2siLAogICAgc3BsaXQuY2V4ID0gMC43LCAKICAgIGV4dHJhID0gMCkKCiMgY3JlYXRlIGF0dHJhY3RpdmUgcG5nIG9mIHRyZWUKcG9zdCh0cmVlX21ham9yaXR5LCBmaWxlID0gImRlY2lzaW9uX3RyZWUucG5nIiwKICAgICB0aXRsZSA9ICJDb3VudHlWb3RpbmdUcmVlIikKCiMgaWYgd2UgdmlldyB0aGUgc3VtbWFyeSwgd2Ugc2VlIHRoZSB2YXJpYWJsZXMgdXNlZCBhcmU6CgojIGNvbGxlZ2Vfb3JfbW9yZSwgd2hpdGUsIGJsYWNrLCB0b3RhbF9wb3AsIGludGxfbWlncmF0aW9uLCBtZWRfaGhfaW5jb21lX3BjdF9zdGF0ZQoKIyBPdXIgY3VycmVudCB0cmFpbmluZyBhY2N1cmFjeSBpcyAwLjkyMjgxLCBwcmV0dHkgZ29vZC4gCgojIHRoaXMgZ2VuZXJhdGVzIHRoZSB0ZXN0IHByZWRpY3Rpb25zCgp0cmVlX3ByZWQgPC0gcHJlZGljdCh0cmVlX21ham9yaXR5LCB0ZXN0LCB0eXBlID0gImNsYXNzIikKCnRhYmxlKHRyZWVfcHJlZCwgdGVzdCRtYWpvcml0eSkKCiMgdGhlIHRlc3QgYWNjdXJhY3kgaXMgMC44ODQzNjgzLCBiYXJlbHkgbGVzcyB0aGFuIHRoZSB0cmFpbmluZyBhY2N1cmFjeQoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgQW5hbHlzaXM6IFByZXNpZGVudGlhbCBWb3RpbmcgYnkgQ291bnR5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCiMgTE9BRElORyBMSUJSQVJJRVMKCmBgYHtyfQpsaWJyYXJ5KHNoaW55KQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShSQ3VybCkKbGlicmFyeShycGFydCkKbGlicmFyeShtYXBzKQpsaWJyYXJ5KG1hcHByb2opCmxpYnJhcnkocnBhcnQucGxvdCkKYGBgCgojIExPQURJTkcgREFUQQoKR2V0IDIwMTAgVVMgY2Vuc3VzIGRhdGEgKGRhdGEgb24gY291bnR5LWxldmVsIHJhY2lhbCBjb21wb3NpdGlvbik6CgpgYGB7ciBsb2FkX2NlbnN1c30KY2Vuc3VzX2RmIDwtIHJlYWRSRFMoImRhdGEvY2Vuc3VzLnJkcyIpCmNlbnN1c19kZiA8LSBhc190aWJibGUoY2Vuc3VzX2RmKQpjZW5zdXNfZGYgPC0gY2Vuc3VzX2RmICU+JQogICAgcmVuYW1lKHRvdGFsX3BvcCA9IHRvdGFsLnBvcCkKYGBgCgpHZXQgcG9wdWxhdGlvbiBkZW5zaXR5IGRhdGEgKGNhbGN1bGF0ZWQgYnkgYSBHaXRodWIgdXNlciB1c2luZyBjZW5zdXMgYW5kIHdpa2lwZWRpYSk6CgpgYGB7ciBsb2FkX2RlbnNpdHl9CgpkZW5zaXR5X3VybCA8LSBnZXRVUkwoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS95a3plbmcvY292aWQtMTkvbWFzdGVyL2RhdGEvY2Vuc3VzLXBvcHVsYXRpb24tbGFuZGFyZWEuY3N2IikKZGVuc2l0eV9kZiA8LSByZWFkX2NzdihkZW5zaXR5X3VybCkKCmBgYAoKR2V0IFVTREEgY291bnR5LWxldmVsIGVkdWNhdGlvbiBzdGF0aXN0aWNzIChmcm9tIHRoZSBVU0RBKQoKYGBge3IgbG9hZF9lZHVjfQoKZWR1Y191cmwgPC0gZ2V0VVJMKCJodHRwczovL3d3dy5lcnMudXNkYS5nb3Yvd2ViZG9jcy9EYXRhRmlsZXMvNDg3NDcvRWR1Y2F0aW9uLmNzdiIpCmVkdWNfZGYgPC0gcmVhZF9jc3YoZWR1Y191cmwpCgpgYGAKCkdldCBwb3ZlcnR5IHN0YXRzIChmcm9tIHRoZSBVU0RBKTogCgpgYGB7ciBsb2FkX3Bvdn0KCnBvdl91cmwgPC0gZ2V0VVJMKCJodHRwczovL3d3dy5lcnMudXNkYS5nb3Yvd2ViZG9jcy9EYXRhRmlsZXMvNDg3NDcvUG92ZXJ0eUVzdGltYXRlcy5jc3YiKQpwb3ZfZGYgPC0gcmVhZF9jc3YocG92X3VybCkKCmBgYAoKR2V0IHVuZW1wbG95bWVudCBzdGF0cyAoZnJvbSB0aGUgVVNEQSk6CgpgYGB7ciBsb2FkX3VuZW1wfQoKZW1wX3VybCA8LSAgZ2V0VVJMKCJodHRwczovL3d3dy5lcnMudXNkYS5nb3Yvd2ViZG9jcy9EYXRhRmlsZXMvNDg3NDcvVW5lbXBsb3ltZW50LmNzdiIpCmVtcF9kZiA8LSByZWFkX2NzdihlbXBfdXJsKQoKYGBgCgpHZXQgcG9wIHN0YXRzIChhbHNvLCBmcm9tIHRoZSBVU0RBKTogCgpgYGB7ciBsb2FkX3BvcH0KCnBvcF91cmwgPC0gZ2V0VVJMKCJodHRwczovL3d3dy5lcnMudXNkYS5nb3Yvd2ViZG9jcy9EYXRhRmlsZXMvNDg3NDcvUG9wdWxhdGlvbkVzdGltYXRlcy5jc3YiKQpwb3BfZGYgPC0gcmVhZF9jc3YocG9wX3VybCkKCmBgYAoKVGhlIGxhc3QgZGF0YSBzZXQgd2Ugd2FudCBpcyBhIC5jc3YgY29udGFpbmluZyBjb3VudHl3aWRlIGVsZWN0aW9uIGRhdGEKd2UgZ290IHRoaXMgZm9yIGEgcHJldmlvdXMgcHJvamVjdCBhbmQgdGhlIGNvZGUgdG8gZ2VuZXJhdGUgaXQgaXMgCmNvbnRhaW5lZCBpbiB0aGUgc2NyaXB0IG11bmdpbmcucHkuCgpgYGB7ciBsb2FkX3ByZXN9Cgp2b3RlX2RmIDwtIHJlYWRfY3N2KCdkYXRhL3ByZXNfcmFjZV8yMDIwLmNzdicpCgpgYGAKCiMgV1JBTkdMSU5HIERBVEEKClRoZXJlIGFyZSBhIGZldyBjaGFuZ2VzIHdlIGhhdmUgdG8gbWFrZSB0byB0aGUgZGF0YSBzZXRzIGJlZm9yZSB3ZSBjYW4gam9pbiB0aGVtLgoKRmlyc3QsIHdlIG5lZWQgdG8gd2lkZW4gdGhlIGVtcF9kZiBhbmQgcG92X2RmIHRhYmxlcy4gV2UgZG8gdGhpcyB3aXRoIHRpZHlyJ3MgcGl2b3Rfd2lkZXIKZnVuY3Rpb24uCgpgYGB7ciBwaXZvdHN9Cgpwb3ZfZGYgPC0gcG92X2RmICU+JQogICAgcGl2b3Rfd2lkZXIobmFtZXNfZnJvbSA9IEF0dHJpYnV0ZSwKICAgICAgICAgICAgICAgIHZhbHVlc19mcm9tID0gVmFsdWUpIAoKZW1wX2RmIDwtIGVtcF9kZiAlPiUKICAgIHBpdm90X3dpZGVyKG5hbWVzX2Zyb20gPSBBdHRyaWJ1dGUsCiAgICAgICAgICAgICAgICB2YWx1ZXNfZnJvbSA9IFZhbHVlKQoKYGBgCgpUaGUgY2Vuc3VzX2RmIGlzIG1pc3NpbmcgYSBGSVBTIGNvbHVtbiwgYW5kIGluc3RlYWQgaXQgaGFzIGEgbmFtZSBjb2x1bW4gd2UgY2FuIHJlcGFpciB0aGlzIGJ5IGpvaW5pbmcgaXQgdG8gYW5vdGhlciB0YWJsZSB0aGF0IGNvbnRhaW5zIGJvdGggbmFtZSBhbmQgRklQUwoKR2xpbXBzaW5nIHRoZSBkYXRhZnJhbWVzIHdlJ3ZlIGxvYWRlZCBzbyBmYXIsIHdlIHNlZSB0aGF0IHRoZSBlbXBsb3ltZW50LCBwb3B1bGF0aW9uLCBhbmQgcG92ZXJ0eSBkYXRhZnJhbWVzIGhhdmUgcG9vcmx5IGZvcm1hdHRlZCBGSVBTdHh0IGNvbHVtbnMgKGluIGZhY3QgdGhleSBhcmUgcmVjb3JkZWQgYXMgZG91YmxlIHZhbHVlcyB3aGVuIHRoZXkgc2hvdWxkIGJlIGNoYXJhY3RlciBzdHJpbmdzKQoKQXMgdGhlIEZJUFMgaXMgdGhlIGpvaW5pbmcga2V5IHdlIG5lZWQgaXQgdG8gYmUgaW4gYSBzdGFuZGFyZCBmb3JtYXQuIFRoZSBmb2xsb3dpbmcgaXMgdXNlZCAKCmBgYHtyIHByZXBlbmRfemVyb30KcHJlcGVuZF96ZXJvIDwtIGZ1bmN0aW9uKG51bWJlcl92YWx1ZSl7CiAgICBjaGFyX3ZhbHVlIDwtIGFzLmNoYXJhY3RlcihudW1iZXJfdmFsdWUpCiAgICBpZihzdHJfbGVuZ3RoKGNoYXJfdmFsdWUpIDwgNSl7CiAgICAgICAgY2hhcl92YWx1ZSA8LSBwYXN0ZSgiMCIsY2hhcl92YWx1ZSwgc2VwID0gIiIpCiAgICB9CiAgICBjaGFyX3ZhbHVlCn0KcHJlcGVuZF96ZXJvIDwtIFZlY3Rvcml6ZShwcmVwZW5kX3plcm8pCmBgYAoKCk5vdyB3ZSBjYW4gYWN0dWFsbHkgZ28gdGhyb3VnaCBhbmQgZml4IHRoZSBGSVBTdHh0IGNvbHVtbnMgaW4gZW1wX2RmLCBwb3BfZGYsIGFuZCBwb3ZfZGYuIFdoaWxlIHdlIGRvIHRoaXMgd2UgYWRkIGluIGR1cGxpY2F0ZXMgb2YgdGhlICh2YWxpZCkgRklQUyBjb2x1bW5zIGluIHRoZSBvdGhlciB0d28gZGF0YSBzZXRzCgpgYGB7ciBmaXBzX211dGF0ZXN9CgpkZW5zaXR5X2RmIDwtIGRlbnNpdHlfZGYgJT4lCiAgICBtdXRhdGUoZmlwcyA9IHByZXBlbmRfemVybyhmaXBzKSkKCnBvdl9kZiA8LSBwb3ZfZGYgJT4lCiAgICBtdXRhdGUoZmlwcyA9IHByZXBlbmRfemVybyhGSVBTdHh0KSkKCmVtcF9kZiA8LSBlbXBfZGYgJT4lCiAgICBtdXRhdGUoZmlwcyA9IHByZXBlbmRfemVybyhmaXBzX3R4dCkpCgpwb3BfZGYgPC0gcG9wX2RmICU+JQogICAgbXV0YXRlKGZpcHMgPSBwcmVwZW5kX3plcm8oRklQU3R4dCkpCgp2b3RlX2RmIDwtIHZvdGVfZGYgJT4lCiAgICByZW5hbWUoZmlwcyA9IGdlb2lkKQoKZWR1Y19kZiA8LSBlZHVjX2RmICU+JQogICAgcmVuYW1lKGZpcHMgPSAnRklQUyBDb2RlJykKCmBgYAoKQWRkIGluIGRlbV9wY3QgYW5kIGdvcF9wY3QgdG8gdGhlIHZvdGVfZGYKCmBgYHtyIHBvbF9wY3RzfQoKdm90ZV9kZiA8LSB2b3RlX2RmICU+JQogICAgbXV0YXRlKAogICAgICAgICAgIGRlbV9wY3QgPSAxMDAqdm90ZXNfZGVtLyh2b3Rlc19kZW0rdm90ZXNfZ29wKSwKICAgICAgICAgICBnb3BfcGN0ID0gMTAwKnZvdGVzX2dvcC8odm90ZXNfZGVtK3ZvdGVzX2dvcCkKICAgICAgICAgICkKCmBgYAoKQWRkIGluIGNhdGVnb3JpY2FsIHZhcmlhYmxlIChkaWQgdGhlIGNvdW50eSB2b3RlIERlbS9HT1AgaW4gMjAyMCBQcmVzKSB0byB2b3RlX2RmCgpQcm9iYWJseSB1bm5lY2Vzc2FyaWx5IHdlIHdyaXRlIGEgbGl0dGxlIGZ1bmN0aW9uIHRvIG1ha2UgdGhlIGNhbGwgdG8gbXV0YXRlIGEgYml0IHNpbXBsZXIuCgpgYGB7ciBtYWpvcml0eV92b3RlfQoKbWFqb3JpdHlfdm90ZSA8LSBmdW5jdGlvbih2b3Rlc19kZW0sIHZvdGVzX2dvcCl7CiAgICB2b3RlID0gJ0QnCiAgICBpZih2b3Rlc19kZW0gPCB2b3Rlc19nb3ApewogICAgICAgIHZvdGUgPSAnUicKICAgIH0KICAgIHZvdGUKfQptYWpvcml0eV92b3RlIDwtIFZlY3Rvcml6ZShtYWpvcml0eV92b3RlKQoKYGBgCgooV2hlbmV2ZXIgeW91J3JlIHVzaW5nIGEgZnVuY3Rpb24gaW4gbXV0YXRlLCBkb24ndCBmb3JnZXQgdG8gdmVjdG9yaXplISkKCk5vdyB3ZSBjcmVhdGUgdGhlIG1ham9yaXR5IHZvdGUgY2F0ZWdvcmljYWwgdmFyCgpgYGB7ciBtYWpvcml0eV92b3RlX211dGF0ZX0KCnZvdGVfZGYgPC0gdm90ZV9kZiAlPiUKICAgIG11dGF0ZShtYWpvcml0eSA9IG1ham9yaXR5X3ZvdGUodm90ZXNfZGVtLCB2b3Rlc19nb3ApKQogICAgCnZvdGVfZGYkbWFqb3JpdHkgPC0gYXMuZmFjdG9yKHZvdGVfZGYkbWFqb3JpdHkpCgpgYGAKCldlIGFsc28gaW5jbHVkZSBhIHN0YXRlLWxldmVsIG1ham9yaXR5IHRvIGRlY2lkZSBob3cgbWFueSBzdGF0ZXMgd2UgY2xhc3NpZnkgaW5jb3JyZWN0bHkKCgoKYGBge3Igc3RhdGVfbWFqb3JpdGllc30KCnN0YXRlX2RmIDwtIHZvdGVfZGYgJT4lCiAgICBncm91cF9ieSh0X3N0YXRlX25hbWUpICU+JQogICAgc3VtbWFyaXNlKHRvdGFsX2RlbSA9IHN1bSh2b3Rlc19kZW0pLCAKICAgICAgICAgICAgICB0b3RhbF9nb3AgPSBzdW0odm90ZXNfZ29wKSkgJT4lCiAgICBtdXRhdGUoc3RhdGVfbWFqb3JpdHkgPSBtYWpvcml0eV92b3RlKHRvdGFsX2RlbSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdG90YWxfZ29wKSkKCnN0YXRlX2RmJHN0YXRlX21ham9yaXR5IDwtIGFzLmZhY3RvcihzdGF0ZV9kZiRzdGF0ZV9tYWpvcml0eSkKCnZvdGVfZGYgPC0gdm90ZV9kZiAlPiUKICAgIGlubmVyX2pvaW4oc3RhdGVfZGYsIGJ5ID0gJ3Rfc3RhdGVfbmFtZScpCgpgYGAKCgojIEpPSU5JTkcgKyBTRUxFQ1RJTkcgREFUQQoKQ29tYmluZSB0aGUgZGF0YWZyYW1lcyB0b2dldGhlcgoKVGhlIG9yZGVyIG1hdHRlcnMsIGJlY2F1c2UgdGhlIGhlbHBlciBmdW5jdGlvbiB3ZSdyZSB1c2luZyBpcyBkZXNpZ25lZCB0byBiZSBhcHBsaWVkIG1haW5seSB0byBjZW5zdXNfZGYsIHNvIHdlIHdhbnQgdG8gbWFrZSBzdXJlIHRoZSBjb3VudGllcyBjb21lIG91dCBpbiB0aGUgb3JkZXIgc3BlY2lmaWVkIGJ5IGNlbnN1c19kZi4gCgpgYGB7ciBtYWluX2pvaW59CgpkZiA8LSBjZW5zdXNfZGYgJT4lCiAgICBsZWZ0X2pvaW4oZGVuc2l0eV9kZiwgYnkgPSAiZmlwcyIpICU+JQogICAgbGVmdF9qb2luKGVkdWNfZGYsIGJ5ID0gImZpcHMiKSAlPiUKICAgIGxlZnRfam9pbihlbXBfZGYsIGJ5ID0gImZpcHMiKSAlPiUKICAgIGxlZnRfam9pbihwb3BfZGYsIGJ5ID0gImZpcHMiKSAlPiUKICAgIGxlZnRfam9pbihwb3ZfZGYsIGJ5ID0gImZpcHMiKSAlPiUKICAgIGxlZnRfam9pbih2b3RlX2RmLCBieSA9ICJmaXBzIikKCmBgYAoKCldlIG5lZWQgdG8gY2hvb3NlIHZhcmlhYmxlcyBvZiBpbnRlcmVzdC4gVGhlcmUgYXJlIGh1bmRyZWRzIG9mIHZhcmlhYmxlcyBpbiBkZiBjdXJyZW50bHksIGZhciBtb3JlIHRoYW4gd2UgbmVlZC4gV2UnbGwganVzdCBjaG9vc2UgYSBmZXcgdGhhdCwgYmFzZWQgb24gcG9wdWxhciBkaXNjb3Vyc2UsIHNlZW0gbGlrZWx5IHRvCmluZmx1ZW5jZSB0aGUgZWxlY3Rpb24gb3V0Y29tZSBvZiBhIGNvdW50eS4gCgoqIEZyb20gY2Vuc3VzX2RmIHdlJ2xsIHRha2U6IAoKICArIHRvdGFsLnBvcAogICsgd2hpdGUKICArIGJsYWNrCiAgKyBoaXNwYW5pYwogICsgYXNpYW4KCiogRnJvbSBkZW5zaXR5X2RmIHdlJ2xsIGp1c3QgdGFrZToKCiArIFBvcHVsYXRpb24gZGVuc2l0eSAocHBsL3NxIG1pLikgd2hpY2ggaXMgbGFiZWxlZCBhcyBQT1AwNjAyMTAKCiogRnJvbSBlZHVjX2RmIHdlIHdpbGwgdGFrZSB0aGUgKGZhaXJseSBzZWxmLWV4cGxhbmF0b3J5KSB2YXJpYWJsZXM6IAoKICsgUGVyY2VudCBvZiBhZHVsdHMgd2l0aCBsZXNzIHRoYW4gYSBoaWdoIHNjaG9vbCBkaXBsb21hLCAyMDE1LTE5CiArIFBlcmNlbnQgb2YgYWR1bHRzIHdpdGggYSBoaWdoIHNjaG9vbCBkaXBsb21hIG9ubHksIDIwMTUtMTkKICsgUGVyY2VudCBvZiBhZHVsdHMgY29tcGxldGluZyBzb21lIGNvbGxlZ2Ugb3IgYXNzb2NpYXRlJ3MgZGVncmVlLCAyMDE1LTE5CiArIFBlcmNlbnQgb2YgYWR1bHRzIHdpdGggYSBiYWNoZWxvcidzIGRlZ3JlZSBvciBoaWdoZXIsIDIwMTUtMTkKCiMgRnJvbSBlbXBfZGYgd2Ugd2lsbCB0YWtlIHRoZSB2YXJpYWJsZXMgCgojIFVuZW1wbG95bWVudF9yYXRlXzIwMTkKIyBNZWRpYW5fSG91c2Vob2xkX0luY29tZV8yMDE5CiMgTWVkX0hIX0luY29tZV9QZXJjZW50X29mX1N0YXRlX1RvdGFsXzIwMTkKIyBSdXJhbF91cmJhbl9jb250aW51dW1fY29kZV8yMDEzCiMgVXJiYW5faW5mbHVlbmNlX2NvZGVfMjAxMyAgCiMgTWV0cm9fMjAxMwoKIyBUaGUgZmlyc3QgdGhyZWUgb2YgdGhlc2UgYXJlIHNlbGYtZXhwbGFuYXRvcnkgKCdISCc9SG91c2Vob2xkKQoKIyBUaGUgbGFzdCB0aHJlZSBhcmUgb3JkaW5hbCB2YXJpYWJsZXMgdGhhdCBkZXNjcmliZSBob3cgcnVyYWwvdXJiYW4KIyBhIGNvdW50eSBpcy4gCgojIFRoZSBkb2N1bWVudGF0aW9uIGZvciB0aGVzZSBpcyBhdmFpbGFibGUgZm9yIGRvd25sb2FkIGFsb25nIHdpdGggdGhlIGRhdGEgc2V0cwojIGF0IGh0dHBzOi8vd3d3LmVycy51c2RhLmdvdi9kYXRhLXByb2R1Y3RzL2NvdW50eS1sZXZlbC1kYXRhLXNldHMvZG93bmxvYWQtZGF0YS8KCiMgRm9yIGV4YW1wbGUsIHRoZSBVcmJhbiBJbmZsdWVuY2UgY29kZSBhc3NpZ25zIHZhbHVlcyBvbiBhIDEtMTIgc2NhbGUKCQkKIyAxCUluIGxhcmdlIG1ldHJvIGFyZWEgb2YgMSsgbWlsbGlvbiByZXNpZGVudHMJCQkKIyAyCUluIHNtYWxsIG1ldHJvIGFyZWEgb2YgbGVzcyB0aGFuIDEgbWlsbGlvbiByZXNpZGVudHMJCQkKIyAuLi4JCQojIDExCU5vbmNvcmUgbm90IGFkamFjZW50IHRvIG1ldHJvIG9yIG1pY3JvIGFyZWEgYW5kIGNvbnRhaW5zIGEgdG93biBvZiBhdCBsZWFzdCAyLDUwMCByZXNpZGVudHMJCQkKIyAxMglOb25jb3JlIG5vdCBhZGphY2VudCB0byBtZXRybyBvciBtaWNybyBhcmVhIGFuZCBkb2VzIG5vdCBjb250YWluIGEgdG93biBvZiBhdCBsZWFzdCAyLDUwMCByZXNpZGVudHMJCQkKCiMgVGhlIHBvcHVsYXRpb24gc3RhdGlzdGljcyBkYXRhc2V0IGlzIHBhcnRpY3VsYXJseSBiaWcsIDE2NiB2YXJpYWJsZXMKCiMgQ2hvb3NpbmcgdGhlIGZvbGxvd2luZzogCgojIFBPUF9FU1RJTUFURV8yMDE5CiMgTl9QT1BfQ0hHXzIwMTkgKHBvcHVsYXRpb24gY2hhbmdlIGluIHRoZSB5ZWFyIDIwMTkpCiMgUl9OQVRVUkFMX0lOQ18yMDE5IChuYXR1cmFsIGluY3JlYXNlID0gYmlydGggcmF0ZS1kZWF0aCByYXRlKQojIElOVEVSTkFUSU9OQUxfTUlHXzIwMTkgKGludGVybmF0aW9uYWwgbWlncmF0aW9uIHRvIHRoaXMgRklQUykKCiMgVGhlIHBvdmVyeSBkYXRhc2V0IGhhcyBvbmx5IDM0IHZhcmlhYmxlcywgd2UnbGwgdGFrZQojIFBDVFBPVkFMTF8yMDE5IChwY3Qgb2YgcG9wdWxhdGlvbiBpbiBwb3ZlcnR5IGluIDIwMTkpCiMgUE9WMDE3XzIwMTkJRXN0aW1hdGUgb2YgcGVvcGxlIGFnZSAwLTE3IGluIHBvdmVydHkgMjAxOQoKIyBUaGUgdm90ZSBkYXRhc2V0IG9ubHkgY29udHJpYnV0ZXMgdGhlIHZhcmlhYmxlIG1ham9yaXR5Cgpnb29kX2NvbHVtbnMgPC0gYyggCiAgICAgICAgICAgICAgICAgICJmaXBzIiwKICAgICAgICAgICAgICAgICAgInRvdGFsX3BvcCIsCiAgICAgICAgICAgICAgICAgICJ3aGl0ZSIsCiAgICAgICAgICAgICAgICAgICJibGFjayIsCiAgICAgICAgICAgICAgICAgICJoaXNwYW5pYyIsCiAgICAgICAgICAgICAgICAgICJhc2lhbiIsCiAgICAgICAgICAgICAgICAgICJQZXJjZW50IG9mIGFkdWx0cyB3aXRoIGxlc3MgdGhhbiBhIGhpZ2ggc2Nob29sIGRpcGxvbWEsIDIwMTUtMTkiLCAKICAgICAgICAgICAgICAgICAgIlBlcmNlbnQgb2YgYWR1bHRzIHdpdGggYSBoaWdoIHNjaG9vbCBkaXBsb21hIG9ubHksIDIwMTUtMTkiLAogICAgICAgICAgICAgICAgICAiUGVyY2VudCBvZiBhZHVsdHMgY29tcGxldGluZyBzb21lIGNvbGxlZ2Ugb3IgYXNzb2NpYXRlJ3MgZGVncmVlLCAyMDE1LTE5IiwKICAgICAgICAgICAgICAgICAgIlBlcmNlbnQgb2YgYWR1bHRzIHdpdGggYSBiYWNoZWxvcidzIGRlZ3JlZSBvciBoaWdoZXIsIDIwMTUtMTkiLAogICAgICAgICAgICAgICAgICAiVW5lbXBsb3ltZW50X3JhdGVfMjAxOSIsCiAgICAgICAgICAgICAgICAgICJNZWRpYW5fSG91c2Vob2xkX0luY29tZV8yMDE5IiwKICAgICAgICAgICAgICAgICAgIk1lZF9ISF9JbmNvbWVfUGVyY2VudF9vZl9TdGF0ZV9Ub3RhbF8yMDE5IiwKICAgICAgICAgICAgICAgICAgIlJ1cmFsX3VyYmFuX2NvbnRpbnV1bV9jb2RlXzIwMTMiLAogICAgICAgICAgICAgICAgICAiVXJiYW5faW5mbHVlbmNlX2NvZGVfMjAxMyIsCiAgICAgICAgICAgICAgICAgICJNZXRyb18yMDEzIiwKICAgICAgICAgICAgICAgICAgIlBPUF9FU1RJTUFURV8yMDE5IiwKICAgICAgICAgICAgICAgICAgIk5fUE9QX0NIR18yMDE5IiwKICAgICAgICAgICAgICAgICAgIlJfTkFUVVJBTF9JTkNfMjAxOSIsCiAgICAgICAgICAgICAgICAgICJJTlRFUk5BVElPTkFMX01JR18yMDE5IiwKICAgICAgICAgICAgICAgICAgIlBDVFBPVkFMTF8yMDE5IiwKICAgICAgICAgICAgICAgICAgIlBPVjAxN18yMDE5IiwKICAgICAgICAgICAgICAgICAgIlBPUDA2MDIxMCIsCiAgICAgICAgICAgICAgICAgICJtYWpvcml0eSIpCgptYWluX2RmIDwtIGRmICU+JQogICAgc2VsZWN0KGFsbF9vZihnb29kX2NvbHVtbnMpKQoKbWFpbl9kZiA8LSBtYWluX2RmICU+JQogICAgcmVuYW1lKCJub19oaWdoX3NjaCIgPSAiUGVyY2VudCBvZiBhZHVsdHMgd2l0aCBsZXNzIHRoYW4gYSBoaWdoIHNjaG9vbCBkaXBsb21hLCAyMDE1LTE5IiwKICAgICAgICAgICAiaGlnaF9zY2glIiA9ICJQZXJjZW50IG9mIGFkdWx0cyB3aXRoIGEgaGlnaCBzY2hvb2wgZGlwbG9tYSBvbmx5LCAyMDE1LTE5IiwKICAgICAgICAgICAic29tZV9jb2wlIiA9ICJQZXJjZW50IG9mIGFkdWx0cyBjb21wbGV0aW5nIHNvbWUgY29sbGVnZSBvciBhc3NvY2lhdGUncyBkZWdyZWUsIDIwMTUtMTkiLAogICAgICAgICAgICJjb2xsZWdlJSIgPSAiUGVyY2VudCBvZiBhZHVsdHMgd2l0aCBhIGJhY2hlbG9yJ3MgZGVncmVlIG9yIGhpZ2hlciwgMjAxNS0xOSIsCiAgICAgICAgICAgInVuZW1wbG95bWVudCIgPSAiVW5lbXBsb3ltZW50X3JhdGVfMjAxOSIsCiAgICAgICAgICAgIm1lZF9oaF9pbmNvbWUiID0gIk1lZGlhbl9Ib3VzZWhvbGRfSW5jb21lXzIwMTkiLAogICAgICAgICAgICJtZWRfaGhfaW5jb21lX3BjdF9zdGF0ZSIgPSAiTWVkX0hIX0luY29tZV9QZXJjZW50X29mX1N0YXRlX1RvdGFsXzIwMTkiLAogICAgICAgICAgICJydXJhbF91cmJhbl9jb250aW51dW0iID0gIlJ1cmFsX3VyYmFuX2NvbnRpbnV1bV9jb2RlXzIwMTMiLAogICAgICAgICAgICJ1cmJhbl9pbmZsdWVuY2UiID0gIlVyYmFuX2luZmx1ZW5jZV9jb2RlXzIwMTMiLAogICAgICAgICAgICJtZXRyb19jb2RlIiA9ICJNZXRyb18yMDEzIiwKICAgICAgICAgICAicG9wdWxhdGlvbiIgPSAiUE9QX0VTVElNQVRFXzIwMTkiLAogICAgICAgICAgICJwb3BfY2hhbmdlIiA9ICJOX1BPUF9DSEdfMjAxOSIsCiAgICAgICAgICAgIm5hdF9pbmNyX3JhdGUiID0gIlJfTkFUVVJBTF9JTkNfMjAxOSIsCiAgICAgICAgICAgImludGxfbWlncmF0aW9uIiA9ICJJTlRFUk5BVElPTkFMX01JR18yMDE5IiwKICAgICAgICAgICAicG92ZXJ0eV9wY3QiID0gIlBDVFBPVkFMTF8yMDE5IiwKICAgICAgICAgICAiY2hpbGRfcG92ZXJ0eSIgPSAiUE9WMDE3XzIwMTkiLAogICAgICAgICAgICJwcGxfcGVyX3NxX21pIiA9ICJQT1AwNjAyMTAiCiAgICAgICAgICAgKQoKCiMgLS0tLSBDQUxJQlJBVElORyBERUNJU0lPTiBUUkVFUyAtLS0tCgojIHdlIG5lZWQgdG8gc3BsaXQgbWFpbl9kZiBpbnRvIGEgdHJhaW5pbmcgc2V0IGFuZCBhIHRlc3Qgc2V0CgoKIyBjcmVhdGUgaWRzIAoKbWFpbl9kZiA8LSBtYWluX2RmICU+JSAKICAgIG11dGF0ZShpZCA9IHJvd19udW1iZXIoKSkKIyBjaGVjayB0aGUgaWRzIApoZWFkKG1haW5fZGYkaWQpCgojIG1ha2UgYSB0cmFpbmluZyBzZXQKdHJhaW4gPC0gbWFpbl9kZiAlPiUgc2FtcGxlX2ZyYWMoLjcwKQoKIyBtYWtlIGEgdGVzdCBzZXQKdGVzdCAgPC0gYW50aV9qb2luKG1haW5fZGYsIHRyYWluLCBieSA9ICdpZCcpCgojIFIncyBkZWNpc2lvbiB0cmVlIGxpYnJhcnkgY29tcGxhaW5zIGEgbG90IGlmIHRoZXJlIGlzIGEgbG90IG9mIG1pc3NpbmcgZGF0YSAKIyBXZSB0YWtlIHRoZSBsYXp5IHJvdXRlIGFuZCBqdXN0IG9taXQgdGhlIGRhdGEgaWYgc29tZXRoaW5nIGlzIG1pc3NpbmcKCiMgd2Ugd2FudCB0byBwcmVkaWN0IG91dGNvbWUgKG1ham9yaXR5KSB3aXRoIHRoZSBmcmVlZG9tCiMgdG8gdXNlIGV2ZXJ5IHZhcmlhYmxlIGV4Y2VwdCBmb3IgZmlwcyAodG9vIHNwZWNpZmljKQoKIyB0cmFpbiB0cmVlCnRyZWVfbWFqb3JpdHkgPC0gcnBhcnQobWFqb3JpdHl+Li1maXBzLAogICAgICAgICAgICAgICAgICAgICAgIG1ldGhvZCA9ICJjbGFzcyIsIAogICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBuYS5vbWl0KG1haW5fZGYpLAogICAgICAgICAgICAgICAgICAgICAgIGNwID0gMC4wMDEpCgoKIyBwbG90IHRyZWUKcHJwKHRyZWVfbWFqb3JpdHksIAogICAgdW5pZm9ybT1UUlVFLAogICAgbWFpbj0iV2hpY2ggd2F5IGRvZXMgYSBjb3VudHkgdm90ZT8iLCAKICAgIE1hcmdpbiA9IDAuMSwKICAgIGJvcmRlci5jb2wgPSAiYmxhY2siLAogICAgc3BsaXQuY2V4ID0gMC43LCAKICAgIGV4dHJhID0gMCkKCiMgY3JlYXRlIGF0dHJhY3RpdmUgcG5nIG9mIHRyZWUKcG9zdCh0cmVlX21ham9yaXR5LCBmaWxlID0gImRlY2lzaW9uX3RyZWUucG5nIiwKICAgICB0aXRsZSA9ICJDb3VudHlWb3RpbmdUcmVlIikKCiMgaWYgd2UgdmlldyB0aGUgc3VtbWFyeSwgd2Ugc2VlIHRoZSB2YXJpYWJsZXMgdXNlZCBhcmU6CgojIGNvbGxlZ2Vfb3JfbW9yZSwgd2hpdGUsIGJsYWNrLCB0b3RhbF9wb3AsIGludGxfbWlncmF0aW9uLCBtZWRfaGhfaW5jb21lX3BjdF9zdGF0ZQoKIyBPdXIgY3VycmVudCB0cmFpbmluZyBhY2N1cmFjeSBpcyAwLjkyMjgxLCBwcmV0dHkgZ29vZC4gCgojIHRoaXMgZ2VuZXJhdGVzIHRoZSB0ZXN0IHByZWRpY3Rpb25zCgp0cmVlX3ByZWQgPC0gcHJlZGljdCh0cmVlX21ham9yaXR5LCB0ZXN0LCB0eXBlID0gImNsYXNzIikKCnRhYmxlKHRyZWVfcHJlZCwgdGVzdCRtYWpvcml0eSkKCiMgdGhlIHRlc3QgYWNjdXJhY3kgaXMgMC44ODQzNjgzLCBiYXJlbHkgbGVzcyB0aGFuIHRoZSB0cmFpbmluZyBhY2N1cmFjeQoK</div>
 
 
 
